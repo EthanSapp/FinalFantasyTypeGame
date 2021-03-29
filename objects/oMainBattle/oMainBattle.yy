@@ -23,8 +23,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy",
+    "name": "batlle system",
+    "path": "folders/Objects/batlle system.yy",
   },
   "resourceVersion": "1.0",
   "name": "oMainBattle",

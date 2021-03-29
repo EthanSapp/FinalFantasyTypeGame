@@ -1,4 +1,6 @@
 state = "INIT";
+dsHeroes = -1;
+dsMonsters = -1;
 
 maxMonsterGroups = 3;
 maxMonstersPerGroup = 5;
@@ -12,3 +14,10 @@ aMonsterPos[1,1] = aMonsterPos[0,1] - (sprite_get_height(sEnemies) + 104) - 24; 
 aMonsterPos[2,0] = 520; //monster group 2 x cord
 aMonsterPos[2,1] = aMonsterPos[0,1] - (sprite_get_height(sEnemies) + 20) - 24; // monster group 2 y cord
 
+//create menu array
+
+aMenu[0] = "ATT";
+aMenu[1] = "MGK";
+aMenu[2] = "ITEM";
+aMenu[3] = "DFND";
+aMenu[4] = "FLEE";

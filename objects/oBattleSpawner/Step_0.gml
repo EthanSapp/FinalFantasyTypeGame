@@ -19,12 +19,31 @@ if (state = "INIT"){
 	}
 	
 	//spawn monsters
-	totalMonsterGroups = irandom_range(1, maxMonsterGroups);
+	totalMonsterGroups = 3;	 
 	
 	for (var i = 0; i < totalMonsterGroups; i ++){
 		monsterGroup = instance_create_depth(aMonsterPos[i, 0], aMonsterPos[i, 1], -100, oEnemies);
-		monsterGroup.type = irandom((sprite_get_number(sEnemies) - 1));
+		monsterGroup.type =	irandom((sprite_get_number(sEnemies) - 1));
 		monsterGroup.number = irandom(maxMonstersPerGroup - 1) + 1;
+	}
+	
+	playerTurn = true;
+	actionState = "INIT";
+	attackTimer = 0;
+	timeTillMonstersAttack = 60;
+	
+	menuState = "MAIN";
+	menuSelected = 0;
+	
+	
+	if (ds_exists(dsHeroes, ds_type_list)){
+		ds_list_destroy(dsHeroes);
+		dsHeroes = -1; 
+	}
+
+	if (ds_exists(dsMonsters, ds_type_list)){
+		ds_list_destroy(dsMonsters);
+		dsMonsters = -1; 
 	}
 	
 	state = "READY";
@@ -32,7 +51,95 @@ if (state = "INIT"){
 
 
 if (state = "READY"){
-	if (keyboard_check_pressed(vk_space)){
-		state = "INIT";
+	if (playerTurn){
+		if (actionState == "INIT"){
+			if (ds_exists(dsHeroes, ds_type_list)){
+				ds_list_destroy(dsHeroes);
+				dsHeroes = -1;
+			}
+
+		
+			dsHeroes = ds_list_create();
+		
+			with(oHero){
+				if (gaHeroes[index, 2] > 0) ds_list_add(other.dsHeroes, id)
+			}
+			
+			menuState = "MAIN";
+			menuSelected = 0;
+			
+			ds_list_sort(dsHeroes,true);
+		
+			actionState = "READY";
+		}
+		
+		if (actionState == "READY"){
+			if (menuSelected = "MAIN"){
+				if (keyboard_check_pressed(vk_up)){
+					if ((menuSelected - 1) >= 0){
+						menuSelected --;
+					} else {
+						menuSelected = array_length_1d(aMenu) - 1;
+					}
+				}
+			}
+			
+			if (keyboard_check_pressed(vk_down)){
+				if ((menuSelected + 1) < array_length_1d(aMenu)){
+					menuSelected ++;
+				} else {
+					menuSelected = 0;
+				}
+			}
+
+			if (keyboard_check_pressed(vk_space)){
+				heroToCommand = ds_list_find_value(dsHeroes, 0);
+				ds_list_delete(dsHeroes, 0);
+			
+			heroToCommand.attack = true;
+			}
+			if (ds_list_size(dsHeroes) <= 0){
+				actionState = "INIT";	
+				playerTurn = false;
+			}
+		}
+	}
+	
+	if (!playerTurn){
+		if (actionState == "INIT"){
+			if (ds_exists(dsMonsters, ds_type_list)){
+				ds_list_destroy(dsMonsters);
+				dsMonsters = -1;
+			}
+
+		
+			dsMonsters = ds_list_create();
+		
+			with(oEnemies){
+				if (number > 0) ds_list_add(other.dsMonsters, id);
+			}
+			
+			ds_list_sort(dsHeroes,true);
+		
+			actionState = "READY";
+		}
+		
+		if (actionState == "READY"){
+				attackTimer ++;
+				
+				if (attackTimer >= timeTillMonstersAttack){
+					activeMonster = ds_list_find_value(dsMonsters, 0);
+					ds_list_delete(dsMonsters, 0);
+					
+					activeMonster.attack = true;
+					attackTimer = 0;
+				}
+				
+				if (ds_list_size(dsMonsters) <= 0){
+					actionState = "INIT";	
+					playerTurn = true;
+				}
+				
+		}
 	}
 }
