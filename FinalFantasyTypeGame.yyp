@@ -2,6 +2,7 @@
   "resources": [
     {"id":{"name":"sTextBox","path":"sprites/sTextBox/sTextBox.yy",},"order":3,},
     {"id":{"name":"oMainBattle","path":"objects/oMainBattle/oMainBattle.yy",},"order":1,},
+    {"id":{"name":"scrDamage","path":"scripts/scrDamage/scrDamage.yy",},"order":0,},
     {"id":{"name":"sSelector","path":"sprites/sSelector/sSelector.yy",},"order":2,},
     {"id":{"name":"sEnemies","path":"sprites/sEnemies/sEnemies.yy",},"order":1,},
     {"id":{"name":"oBattleSpawner","path":"objects/oBattleSpawner/oBattleSpawner.yy",},"order":0,},
@@ -46,14 +47,14 @@
     {"folderPath":"folders/Objects/players and enemies.yy","order":5,"resourceVersion":"1.0","name":"players and enemies","tags":[],"resourceType":"GMFolder",},
   ],
   "AudioGroups": [
-    {"targets":461609314234257646,"resourceVersion":"1.0","name":"audiogroup_default","resourceType":"GMAudioGroup",},
+    {"targets":-1,"resourceVersion":"1.3","name":"audiogroup_default","resourceType":"GMAudioGroup",},
   ],
   "TextureGroups": [
-    {"isScaled":true,"autocrop":true,"border":2,"mipsToGenerate":0,"groupParent":null,"targets":461609314234257646,"resourceVersion":"1.0","name":"Default","resourceType":"GMTextureGroup",},
+    {"isScaled":true,"autocrop":true,"border":2,"mipsToGenerate":0,"groupParent":null,"targets":-1,"resourceVersion":"1.3","name":"Default","resourceType":"GMTextureGroup",},
   ],
   "IncludedFiles": [],
   "MetaData": {
-    "IDEVersion": "2.3.1.536",
+    "IDEVersion": "2.3.1.542",
   },
   "resourceVersion": "1.4",
   "name": "FinalFantasyTypeGame",
