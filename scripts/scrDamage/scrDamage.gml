@@ -11,7 +11,11 @@ function scrDamage(){
 			target.number --;
 			
 			if (target.number <= 0){
+				
+				
 				target.dead = true;
+				pos = ds_list_find_index(dsTargetMonsters, target);
+				ds_list_delete(dsTargetMonsters, pos);
 			} else {
 				target.hp = gaMonsters[target.type, 1]
 			}
@@ -22,6 +26,9 @@ function scrDamage(){
 			
 			if (gaHeroes[target.index, 2] <= 0){
 				target.dead = true;
+				
+				pos = ds_list_find_index(dsTargetHeroes, target);
+				ds_list_delete(dsTargetHeroes, pos);
 			}
 		}
 	}

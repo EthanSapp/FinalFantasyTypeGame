@@ -1,6 +1,8 @@
 state = "INIT";
 dsHeroes = -1;
 dsMonsters = -1;
+dsTargetMonsters = -1;
+dsTargetHeroes = -1;
 
 maxMonsterGroups = 3;
 maxMonstersPerGroup = 5;

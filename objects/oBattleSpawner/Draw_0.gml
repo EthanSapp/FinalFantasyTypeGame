@@ -24,6 +24,13 @@ if (menuState == "MAIN"){
 		}
 	}
 	if (optionState = "ATTACK"){
-		draw_sprite_ext(sSelector, 0, optionTarget.x + sprite_get_width(sEnemies) / 2, optionTarget.y, 1, 1, 270, c_white, 1);
+		if (optionTarget.sprite_index == sEnemies){
+			draw_sprite_ext(sSelector, 0, optionTarget.x + sprite_get_width(sEnemies) / 2, optionTarget.y, 1, 1, 270, c_white, 1);
+		}else {
+			if (optionTarget.sprite_index == sHero){
+				draw_sprite_ext(sSelector, 0, optionTarget.x + sprite_get_width(sEnemies) / 2, optionTarget.y - sprite_get_height(sSelector), 1, 1, 270, c_white, 1);
+			}
+		}
 	}
 }
+

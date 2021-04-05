@@ -1,4 +1,17 @@
 if (state = "INIT"){
+	if (ds_exists(dsTargetHeroes, ds_type_list)){
+		ds_list_destroy(dsTargetHeroes);
+		dsTargetHeroes = -1; 
+	}
+
+	if (ds_exists(dsTargetMonsters, ds_type_list)){
+		ds_list_destroy(dsTargetMonsters);
+		dsTargetMonsters = -1; 
+	}
+	
+	dsTargetHeroes = ds_list_create();
+	dsTargetMonsters = ds_list_create();
+	
 	with(oHero){
 		instance_destroy();
 	}
@@ -17,6 +30,7 @@ if (state = "INIT"){
 		hero = instance_create_depth(heroX, heroY + (i * (sprite_get_height(sHero) + 20)), -100, oHero);
 		hero.index = i;
 		hero.dead = false;
+		ds_list_add(dsTargetHeroes, hero);
 	}
 	
 	//spawn monsters
@@ -28,7 +42,9 @@ if (state = "INIT"){
 		monsterGroup.number = irandom(maxMonstersPerGroup - 1) + 1;
 		monsterGroup.dead = false;
 		monsterGroup.hp  = gaMonsters[monsterGroup.type, 1];
+		ds_list_add(dsTargetMonsters, monsterGroup);
 	}
+	
 	
 	playerTurn = true;
 	actionState = "INIT";
@@ -107,20 +123,48 @@ if (state = "READY"){
 									break;
 								}
 							}
+							selectedActor = 0;
 							optionState = "ATTACK";
 						} else {
 							heroToCommand = ds_list_find_value(dsHeroes, 0);
 							ds_list_delete(dsHeroes, 0);
 							
-							heroMaxDamage = gaHeroes[heroToCommand, 5];
+							heroMaxDamage = gaHeroes[heroToCommand.index, 5];
 							heroTotaldamage = irandom_range(1, heroMaxDamage);
 							
 							scrDamage(heroTotaldamage, optionTarget);
 							
 							heroToCommand.attack = true;
+							optionState = "MENU";
 						}
 					}
 				}
+				
+				if (optionState = "ATTACK"){
+					if (optionTarget.sprite_index == sEnemies){
+						if (keyboard_check_pressed(vk_left)) || (keyboard_check_pressed(vk_right)){
+							selectedActor = 0;
+							optionTarget = dsTargetHeroes[|0];
+						}
+						if (keyboard_check_pressed(vk_down)){
+							if ((selectedActor + 1) < ds_list_size(dsTargetMonsters)){
+								selectedActor ++;
+							} else {
+								selectedActor = 0;
+							}
+							optionTarget = dsTargetMonsters[|selectedActor];
+						}
+						if (keyboard_check_pressed(vk_up)){
+							if ((selectedActor - 1) >= 0){
+								selectedActor --;
+							} else {
+								selectedActor = (ds_list_size(dsTargetMonsters) - 1)
+							}
+							optionTarget = dsTargetHeroes[|0];
+						}
+					}
+				}
+				
 			}
 
 			if (ds_list_size(dsHeroes) <= 0){
