@@ -32,4 +32,7 @@ function scrDamage(){
 			}
 		}
 	}
+	
+	damage = instance_create_depth(target.x + sprite_get_width(target.sprite_index) / 2, target.y, -200, oDamageIndicator);
+	damage.text = totalDamage
 }

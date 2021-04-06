@@ -142,10 +142,11 @@ if (state = "READY"){
 				
 				if (optionState = "ATTACK"){
 					if (optionTarget.sprite_index == sEnemies){
-						if (keyboard_check_pressed(vk_left)) || (keyboard_check_pressed(vk_right)){
+						if (keyboard_check_pressed(vk_left)){
 							selectedActor = 0;
 							optionTarget = dsTargetHeroes[|0];
 						}
+						
 						if (keyboard_check_pressed(vk_down)){
 							if ((selectedActor + 1) < ds_list_size(dsTargetMonsters)){
 								selectedActor ++;
@@ -160,11 +161,34 @@ if (state = "READY"){
 							} else {
 								selectedActor = (ds_list_size(dsTargetMonsters) - 1)
 							}
-							optionTarget = dsTargetHeroes[|0];
+							optionTarget = dsTargetMonsters[|selectedActor];
+						}
+					} else {
+						if (optionTarget.sprite_index == sHero){
+							if (keyboard_check_pressed(vk_right)){
+								selectedActor = 0;
+								optionTarget = dsTargetMonsters[|0];
+							}
+						
+							if (keyboard_check_pressed(vk_down)){
+								if ((selectedActor + 1) < ds_list_size(dsTargetHeroes)){
+									selectedActor ++;
+								} else {
+									selectedActor = 0;
+								}
+								optionTarget = dsTargetHeroes[|selectedActor];
+							}
+							if (keyboard_check_pressed(vk_up)){
+								if ((selectedActor - 1) >= 0){
+									selectedActor --;
+								} else {
+									selectedActor = (ds_list_size(dsTargetHeroes) - 1)
+								}
+								optionTarget = dsTargetHeroes[|selectedActor];
+							}
 						}
 					}
 				}
-				
 			}
 
 			if (ds_list_size(dsHeroes) <= 0){
