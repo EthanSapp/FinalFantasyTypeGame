@@ -6,7 +6,7 @@ draw_set_font(fMenu);
 
 fontSize = font_get_size(fMenu);
 
-BUFFER = 4;
+BUFFER = 10;
 menuX = (room_width / 2 ) + sprite_get_width(sSelector) + 120;
 menuY = room_height - ((fontSize + BUFFER) * (array_length_1d(aMenu)));
 
@@ -35,15 +35,17 @@ if (menuState == "MAIN"){
 }
 
 numberOfHeroes = array_height_2d(gaHeroes);
-
 uiX = BUFFER;
 uiY = room_height - (numberOfHeroes * (fontSize + BUFFER))
 
+draw_text(uiX, uiY - (fontSize + BUFFER), "NAME:");
+draw_text(uiX + string_width("ANDROMEDA "), uiY - (fontSize + BUFFER), "HP:");
+draw_text(uiX + string_width("ANDROMEDA 999/999"), uiY - (fontSize + BUFFER), "MP:");
+
 for (var i = 0; i < numberOfHeroes; i++){
-	draw_set_color(c_white);
 	draw_text(uiX, uiY + (i * (fontSize + BUFFER)), gaHeroes[i, 0]);
-	draw_set_color(c_red);
 	draw_text(uiX + string_width("ANDROMEDA "), uiY + (i * (fontSize + BUFFER)), string(gaHeroes[i, 2])  + "/" + string(gaHeroes[i, 2]));
-	draw_set_color(c_blue);
 	draw_text(uiX + string_width("ANDROMEDA 999/999"), uiY + (i * (fontSize + BUFFER)), string(gaHeroes[i, 4])  + "/" + string(gaHeroes[i, 3]));
 }
+
+

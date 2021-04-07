@@ -6,3 +6,4 @@ attack = false;
 attackAnimationTimer = 0;
 timeTillAttackAnimationEnds = 30;
 startX = x;
+startY = y;

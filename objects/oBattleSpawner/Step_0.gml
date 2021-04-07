@@ -24,7 +24,7 @@ if (state = "INIT"){
 	heroPartySize = array_height_2d(gaHeroes);
 	
 	heroX = room_width - 520;
-	heroY = 100;
+	heroY = 50;
 	
 	for (var i = 0; i < heroPartySize; i ++){
 		hero = instance_create_depth(heroX, heroY + (i * (sprite_get_height(sHero) + 20)), -100, oHero);
@@ -38,7 +38,7 @@ if (state = "INIT"){
 	
 	for (var i = 0; i < totalMonsterGroups; i ++){
 		monsterGroup = instance_create_depth(aMonsterPos[i, 0], aMonsterPos[i, 1], -100, oEnemies);
-		monsterGroup.type =	irandom((sprite_get_number(sEnemies) - 1));
+		monsterGroup.type =	irandom(sEnemies);
 		monsterGroup.number = irandom(maxMonstersPerGroup - 1) + 1;
 		monsterGroup.dead = false;
 		monsterGroup.hp  = gaMonsters[monsterGroup.type, 1];
@@ -50,6 +50,7 @@ if (state = "INIT"){
 	actionState = "INIT";
 	attackTimer = 0;
 	timeTillMonstersAttack = 60;
+	playerIndicator = 0;
 	
 	menuState = "MAIN";
 	menuSelected = 0;
@@ -90,6 +91,7 @@ if (state = "READY"){
 			menuSelected = 0;
 			optionState = "MENU";
 			optionTarget = noone;
+			playerIndicator = 0;
 		
 			actionState = "READY";
 		}
@@ -128,6 +130,7 @@ if (state = "READY"){
 						} else {
 							heroToCommand = ds_list_find_value(dsHeroes, 0);
 							ds_list_delete(dsHeroes, 0);
+							playerIndicator ++;
 							
 							heroMaxDamage = gaHeroes[heroToCommand.index, 5];
 							heroTotaldamage = irandom_range(1, heroMaxDamage);
