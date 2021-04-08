@@ -12,4 +12,15 @@ if (state == "READY"){
 	numberX = x + ((sprite_width / 2) + 8);
 	draw_set_halign(fa_left);
 	draw_text(numberX, y + (sprite_height / 2), " x" + string(number));
+	
+	draw_set_halign(fa_center)
+	if (stunned > 0){
+		draw_text(x + (sprite_width / 2), y, "STUNNED");
+	}
+	if (stunned > 0) && (isAsleep){
+		draw_text(x + (sprite_width / 2), y - 24, "ASLEEP");
+	}
+	if (stunned == 0) && (isAsleep){
+		draw_text(x + (sprite_width / 2), y, "ASLEEP");
+	}
 }

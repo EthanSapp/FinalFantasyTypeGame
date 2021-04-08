@@ -1,3 +1,5 @@
+#region init/reset
+
 if (state = "INIT"){
 	if (ds_exists(dsTargetHeroes, ds_type_list)){
 		ds_list_destroy(dsTargetHeroes);
@@ -30,6 +32,8 @@ if (state = "INIT"){
 		hero = instance_create_depth(heroX, heroY + (i * (sprite_get_height(sHero) + 20)), -100, oHero);
 		hero.index = i;
 		hero.dead = false;
+		hero.stunned = 0;
+		hero.isAsleep = false;
 		ds_list_add(dsTargetHeroes, hero);
 	}
 	
@@ -41,6 +45,8 @@ if (state = "INIT"){
 		monsterGroup.type =	irandom(sEnemies);
 		monsterGroup.number = irandom(maxMonstersPerGroup - 1) + 1;
 		monsterGroup.dead = false;
+		monsterGroup.stunned = 0;
+		monsterGroup.isAsleep = false;
 		monsterGroup.hp  = gaMonsters[monsterGroup.type, 1];
 		ds_list_add(dsTargetMonsters, monsterGroup);
 	}
@@ -48,6 +54,7 @@ if (state = "INIT"){
 	
 	playerTurn = true;
 	actionState = "INIT";
+	magicState = "MAIN"
 	attackTimer = 0;
 	timeTillMonstersAttack = 60;
 	playerIndicator = 0;
@@ -66,9 +73,15 @@ if (state = "INIT"){
 		dsMonsters = -1; 
 	}
 	
+	if (ds_exists(dsMagic, ds_type_list)){
+		ds_list_destroy(dsMagic);
+		dsMagic = -1; 
+	}
+	
 	state = "READY";
 } 
 
+#endregion
 
 if (state = "READY"){
 	if (playerTurn){
@@ -117,6 +130,7 @@ if (state = "READY"){
 				}
 				
 				if (keyboard_check_pressed(vk_space)){
+					#region attack
 					if(menuSelected == 0){
 						if (optionState != "ATTACK"){
 							with(oEnemies){
@@ -141,9 +155,138 @@ if (state = "READY"){
 							optionState = "MENU";
 						}
 					}
+					#endregion
+					
+					#region magic
+					//magic
+					if (menuSelected == 1){
+						if (optionState != "MAGIC"){
+							//check magic list exists
+							if (ds_exists(dsMagic, ds_type_list)){
+								ds_list_destroy(dsMagic);
+								dsMagic = -1;
+							}
+							//create magic list
+							dsMagic = ds_list_create();
+							
+							//add spells to list
+							for (var spells = 6; spells < 10; spells ++){
+								if(gaHeroes[playerIndicator, spells] = true){
+									ds_list_add(dsMagic, spells);
+								}
+							}
+							
+							selectedSpell = 0;
+							magicState = "MAIN"
+							optionState = "MAGIC";
+						} else {
+							if (magicState != "CHOOSE TARGET"){
+								if (dsMagic[| selectedSpell] == 6){
+									with (oHero){
+										if (image_index == other.playerIndicator){
+											other.optionTarget = id;
+											break;
+										}
+									}
+									selectedActor = playerIndicator;
+								} else {
+									with (oEnemies){
+										if (number > 0){
+											other.optionTarget = id;
+											break;
+										}
+									}
+									selectedActor = 0;
+								}
+								magicState = "CHOOSE TARGET";
+							} else {
+								if (dsMagic[| selectedSpell] <= 7){
+									if (dsMagic[| selectedSpell] == 6){
+										heroTotaldamage = irandom_range(-4, -8);
+										
+										scrDamage(heroTotaldamage, optionTarget);
+									} else if (dsMagic[| selectedSpell] == 7){
+										heroTotaldamage = irandom_range(4, 8);
+										
+										scrDamage(heroTotaldamage, optionTarget);
+									}
+								} else {
+									//stun
+									if (dsMagic[| selectedSpell] == 8){
+										chanceToStun = 50;
+										roll = irandom(99);
+										if (chanceToStun < roll){
+											optionTarget.stunned = 3;
+										}
+
+									}
+									//sleep
+									if (dsMagic[| selectedSpell] == 9){
+										chanceToSleep = 25;
+										roll = irandom(99);
+										
+										if (chanceToSleep < roll){
+											optionTarget.isAsleep = true;
+										}
+									}
+								}
+								heroToCommand = ds_list_find_value(dsHeroes, 0);
+								ds_list_delete(dsHeroes, 0);
+								playerIndicator ++;
+								heroToCommand.attack = true;
+								optionState = "MENU";
+								magicState = "MAIN";
+							}
+						}
+					}
+					#endregion
+					//item
+					if (menuSelected == 2){
+						selectedItem = 0;
+						if (optionState != "ITEM") && (optionState != "CHOOSE TARGET"){
+							optionState = "ITEM";
+						} else {
+							if (optionState == "ITEM"){
+								if (gaInv[playerIndicator, selectedItem] != ""){
+									with(oHero){
+										if (image_index == other.playerIndicator){
+											other.optionTarget = id;
+											other.selectedActor = other.playerIndicator;
+											break;
+										}
+									}
+									optionState = "CHOOSE TARGET"
+								}
+							} else {
+								if (optionState == "CHOOSE TARGET"){
+									heroToCommand = ds_list_find_value(dsHeroes, 0);
+									
+									gaInv[playerIndicator, selectedItem] == "";
+									
+									ds_list_delete(dsHeroes, 0);
+									playerIndicator ++;
+							
+									heroTotaldamage = irandom_range(-1, -10);
+							
+									scrDamage(heroTotaldamage, optionTarget);
+							
+									heroToCommand.attack = true;
+									optionState = "MENU";
+								}
+							}
+						}
+					}
+					//defence
+					if (menuSelected == 3){
+						optionState = "DEFEND";
+					}
+					//flee
+					if (menuSelected == 4){
+						optionState = "FLEE";
+					}
 				}
 				
-				if (optionState = "ATTACK"){
+				if (optionState = "ATTACK") || (magicState == "CHOOSE TARGET"){
 					if (optionTarget.sprite_index == sEnemies){
 						if (keyboard_check_pressed(vk_left)){
 							selectedActor = 0;
@@ -192,6 +335,49 @@ if (state = "READY"){
 						}
 					}
 				}
+				//magic
+				if (optionState = "MAGIC"){
+					
+					if (magicState == "MAIN"){
+						totalKnownSpells = ds_list_size(dsMagic) - 1;
+						if (keyboard_check_pressed(vk_up)){
+							if (selectedSpell == 0){
+								selectedSpell = totalKnownSpells
+							} else {
+								selectedSpell --
+							}
+						}
+						if (keyboard_check_pressed(vk_down)){
+							if (selectedSpell == totalKnownSpells){
+								selectedSpell = 0;
+							} else {
+								selectedSpell ++;
+							}
+						}
+					}
+				}
+				if (optionState == "ITEM"){
+					totalItems = 3;
+					if (keyboard_check_pressed(vk_up)){
+						if (selectedItem == 0){
+							selectedItem = totalItems
+						} else {
+							selectedItem --
+						}
+					}
+					if (keyboard_check_pressed(vk_down)){
+						if (selectedItem == totalItems){
+							selectedItem = 0;
+						} else {
+							selectedItem ++;
+						}
+					}
+				}
+			}
+			
+			if (keyboard_check_pressed(vk_tab)){
+				optionState = "MENU";
+				magicState = "MAIN"
 			}
 
 			if (ds_list_size(dsHeroes) <= 0){
@@ -200,7 +386,7 @@ if (state = "READY"){
 			}
 		}
 	}
-	
+	#region enemy turn
 	if (!playerTurn){
 		if (actionState == "INIT"){
 			if (ds_exists(dsMonsters, ds_type_list)){
@@ -224,10 +410,28 @@ if (state = "READY"){
 				attackTimer ++;
 				
 				if (attackTimer >= timeTillMonstersAttack){
+					//ger proper monster
+					
 					activeMonster = ds_list_find_value(dsMonsters, 0);
 					ds_list_delete(dsMonsters, 0);
 					
-					activeMonster.attack = true;
+					//check if stun / asleep
+					if (activeMonster.stunned > 0){
+						activeMonster.stunned --;
+					}
+					
+					if (activeMonster.isAsleep){
+						roll = irandom(99);
+						chanceToWake = 25;
+						
+						if (chanceToWake < roll){
+							activeMonster.isAsleep = false;
+						}
+					}
+					
+					if (activeMonster.stunned <= 0) && (activeMonster.isAsleep = false){
+						activeMonster.attack = true;
+					}
 					attackTimer = 0;
 				}
 				
@@ -238,4 +442,5 @@ if (state = "READY"){
 				
 		}
 	}
+	#endregion
 }

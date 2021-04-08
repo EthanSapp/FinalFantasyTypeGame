@@ -3,6 +3,7 @@ dsHeroes = -1;
 dsMonsters = -1;
 dsTargetMonsters = -1;
 dsTargetHeroes = -1;
+dsMagic = -1;
 
 maxMonsterGroups = 3;
 maxMonstersPerGroup = 5;
@@ -23,3 +24,10 @@ aMenu[1] = "MGK";
 aMenu[2] = "ITEM";
 aMenu[3] = "DFND";
 aMenu[4] = "FLEE";
+
+//create spell text array
+
+aSpell[6] = "HEAL";
+aSpell[7] = "HURT";
+aSpell[8] = "STUN";
+aSpell[9] = "SLEEP";

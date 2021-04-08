@@ -17,3 +17,8 @@ if (ds_exists(dsTargetMonsters, ds_type_list)){
 	ds_list_destroy(dsTargetMonsters);
 	dsTargetMonsters = -1; 
 }
+
+if (ds_exists(dsMagic, ds_type_list)){
+	ds_list_destroy(dsMagic);
+	dsMagic = -1; 
+}

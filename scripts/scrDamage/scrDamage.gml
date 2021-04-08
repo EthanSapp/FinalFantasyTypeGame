@@ -11,8 +11,6 @@ function scrDamage(){
 			target.number --;
 			
 			if (target.number <= 0){
-				
-				
 				target.dead = true;
 				pos = ds_list_find_index(dsTargetMonsters, target);
 				ds_list_delete(dsTargetMonsters, pos);
@@ -21,8 +19,8 @@ function scrDamage(){
 			}
 		}
 	} else {
-		if (target.sprite_index == sEnemies){
-			gaMonsters[target.index, 2] -= totalDamage;
+		if (target.sprite_index == sHero){
+			gaHeroes[target.index, 2] -= totalDamage;
 			
 			if (gaHeroes[target.index, 2] <= 0){
 				target.dead = true;

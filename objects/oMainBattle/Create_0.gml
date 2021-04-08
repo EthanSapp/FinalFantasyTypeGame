@@ -46,9 +46,9 @@ gaHeroes[heroCount, 7] = true; //knows hurt spell
 gaHeroes[heroCount, 8] = false; // knows stun spell
 gaHeroes[heroCount, 9] = false; //know sleep
 
-gaInv[heroCount, 0] = -1;
-gaInv[heroCount, 1] = -1;
-gaInv[heroCount, 2] = -1;	
+gaInv[heroCount, 0] = "HERB";
+gaInv[heroCount, 1] = "";
+gaInv[heroCount, 2] = "";	
 	
 
 heroCount ++;
@@ -64,9 +64,9 @@ gaHeroes[heroCount, 7] = false; //knows hurt spell
 gaHeroes[heroCount, 8] = false; // knows stun spell
 gaHeroes[heroCount, 9] = false; //know sleep
 
-gaInv[heroCount, 0] = -1;
-gaInv[heroCount, 1] = -1;
-gaInv[heroCount, 2] = -1;	
+gaInv[heroCount, 0] = "HERB";
+gaInv[heroCount, 1] = "";
+gaInv[heroCount, 2] = "";	
 
 
 heroCount ++;
@@ -83,9 +83,9 @@ gaHeroes[heroCount, 7] = true; //knows hurt spell
 gaHeroes[heroCount, 8] = true; // knows stun spell
 gaHeroes[heroCount, 9] = true; //know sleep
 
-gaInv[heroCount, 0] = -1;
-gaInv[heroCount, 1] = -1;
-gaInv[heroCount, 2] = -1;	
+gaInv[heroCount, 0] = "HERB";
+gaInv[heroCount, 1] = "";
+gaInv[heroCount, 2] = "";	
 	
 
 
@@ -103,9 +103,9 @@ gaHeroes[heroCount, 7] = false; //knows hurt spell
 gaHeroes[heroCount, 8] = false; // knows stun spell
 gaHeroes[heroCount, 9] = true; //know sleep
 
-gaInv[heroCount, 0] = -1;
-gaInv[heroCount, 1] = -1;
-gaInv[heroCount, 2] = -1;	
+gaInv[heroCount, 0] = "HERB";
+gaInv[heroCount, 1] = "";
+gaInv[heroCount, 2] = "";	
 
 
 heroCount ++;
