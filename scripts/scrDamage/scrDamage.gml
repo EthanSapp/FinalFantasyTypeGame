@@ -14,12 +14,19 @@ function scrDamage(){
 				target.dead = true;
 				pos = ds_list_find_index(dsTargetMonsters, target);
 				ds_list_delete(dsTargetMonsters, pos);
+				
+				if (ds_list_size(dsTargetMonsters) == 0){
+					oBattleSpawner.state = "BATTLE OVER";
+					oBattleSpawner.battleOverText = "VICTORY!"
+				}
 			} else {
 				target.hp = gaMonsters[target.type, 1]
 			}
 		}
 	} else {
 		if (target.sprite_index == sHero){
+			if (target.isDefending) totalDamage = ceil(totalDamage / 2);
+			
 			gaHeroes[target.index, 2] -= totalDamage;
 			
 			if (gaHeroes[target.index, 2] <= 0){
@@ -27,6 +34,11 @@ function scrDamage(){
 				
 				pos = ds_list_find_index(dsTargetHeroes, target);
 				ds_list_delete(dsTargetHeroes, pos);
+				
+				if (ds_list_size(dsTargetHeroes) == 0){
+					oBattleSpawner.state = "BATTLE OVER";
+					oBattleSpawner.battleOverText = "DEFEAT..."
+				}
 			}
 		}
 	}

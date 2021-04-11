@@ -52,8 +52,8 @@ if (menuState == "MAIN"){
 	}
 	if (optionState == "ITEM"){
 		for (var item = 0; item < 3; item ++){
-			if (gaInv[playerIndicator, item] == "") itemName = "EMPTY"
-			else itemName = gaInv[playerIndicator, item];
+			if (gaInv[heroToCommand.index, item] == "") itemName = "EMPTY"
+			else itemName = gaInv[heroToCommand.index, item];
 			
 			draw_text(menuX + 100, menuY + (item * (fontSize + BUFFER)), itemName);
 			
@@ -67,6 +67,7 @@ if (menuState == "MAIN"){
 }
 
 numberOfHeroes = array_height_2d(gaHeroes);
+numberOfMonsters = array_height_2d(gaMonsters);
 uiX = BUFFER;
 uiY = room_height - (numberOfHeroes * (fontSize + BUFFER))
 
@@ -78,6 +79,18 @@ for (var i = 0; i < numberOfHeroes; i++){
 	draw_text(uiX, uiY + (i * (fontSize + BUFFER)), gaHeroes[i, 0]);
 	draw_text(uiX + string_width("ANDROMEDA "), uiY + (i * (fontSize + BUFFER)), string(gaHeroes[i, 2])  + "/" + string(gaHeroes[i, 1]));
 	draw_text(uiX + string_width("ANDROMEDA 999/999"), uiY + (i * (fontSize + BUFFER)), string(gaHeroes[i, 4])  + "/" + string(gaHeroes[i, 3]));
+}
+
+//for (var i = 0; i < numberOfMonsters; i++){
+//	draw_text(x, y + (i * (fontSize + BUFFER)), gaMonsters[i, 0]);
+//	draw_text(x + string_width("MONSTERS "), y + (i * (fontSize + BUFFER)), string(gaMonsters[i, 2])  + "/" + string(gaMonsters[i, 1]));
+
+//}
+
+if (state = "BATTLE OVER"){
+	draw_set_halign(fa_center);
+	draw_set_valign(fa_middle);
+	draw_text(room_width / 2, room_height / 2, battleOverText);
 }
 
 

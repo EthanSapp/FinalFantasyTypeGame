@@ -1,7 +1,7 @@
 if (state == "READY"){
 	draw_self();
 	
-	if ((oBattleSpawner.playerTurn) && (oBattleSpawner.playerIndicator == image_index)){
+	if ((oBattleSpawner.playerTurn) && (oBattleSpawner.heroToCommand == id)){
 		draw_sprite(sSelector, 0, x - (sprite_get_width(sSelector)), y + (sprite_height / 2));
 	}
 	

@@ -11,7 +11,7 @@ if (state == "READY"){
 	//draw_text(x + (sprite_width / 2), y, string(number));
 	numberX = x + ((sprite_width / 2) + 8);
 	draw_set_halign(fa_left);
-	draw_text(numberX, y + (sprite_height / 2), " x" + string(number));
+//	draw_text(numberX, y + (sprite_height / 2), string(gaMonsters[i, );
 	
 	draw_set_halign(fa_center)
 	if (stunned > 0){
