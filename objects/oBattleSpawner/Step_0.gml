@@ -396,7 +396,7 @@ if (state = "READY"){
 					}
 				}
 				if (optionState == "ITEM"){
-					totalItems = 3;
+					totalItems = 50;
 					if (keyboard_check_pressed(vk_up)){
 						if (selectedItem == 0){
 							selectedItem = totalItems

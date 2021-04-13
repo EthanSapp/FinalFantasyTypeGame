@@ -1,0 +1,1 @@
+shouldShowInventory = !shouldShowInventory;
