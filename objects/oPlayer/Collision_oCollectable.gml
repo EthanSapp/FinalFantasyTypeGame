@@ -1,4 +1,4 @@
-var key = other.object.index;
+var key = other.object_index;
 var value = 1;
 
 if (ds_map_exists(inventory, key)){

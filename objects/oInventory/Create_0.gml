@@ -1,1 +1,0 @@
-inventory = ds_map_create();
