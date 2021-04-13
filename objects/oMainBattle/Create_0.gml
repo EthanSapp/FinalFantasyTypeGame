@@ -148,3 +148,10 @@ gaMonsters[monsterCount, 8] = false; //knows stun spell
 gaMonsters[monsterCount, 9] = false; // knows sleep
 
 monsterCount ++;
+
+globalvar inv, potionAmount, eatherAmount, bombAmount, item;
+inv[item] = "POTION";
+inv[1] = "EATHER";
+inv[2] = "BOMB";
+inv[3] = "REVIVE";
+

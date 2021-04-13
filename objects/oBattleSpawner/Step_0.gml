@@ -273,7 +273,7 @@ if (state = "READY"){
 							optionState = "ITEM";
 						} else {
 							if (optionState == "ITEM"){
-								if (gaInv[heroToCommand.index, selectedItem] != ""){
+								if (/*gaInv[heroToCommand.index, selectedItem]*/inv[selectedItem]  != ""){
 									optionTarget = heroToCommand;
 									selectedActor = heroToCommand.index
 									optionState = "CHOOSE TARGET"
@@ -282,14 +282,18 @@ if (state = "READY"){
 								if (optionState == "CHOOSE TARGET"){
 									heroToCommand = ds_list_find_value(dsHeroes, 0);
 									
-									gaInv[heroToCommand.index, selectedItem] = "";
+									//gaInv[heroToCommand.index, selectedItem] = "";
 									
 									ds_list_delete(dsHeroes, 0);
-							
-									heroTotaldamage = irandom_range(-1, -10);
-							
-									scrDamage(heroTotaldamage, optionTarget);
-							
+									if (inv[selectedItem] == "POTION"){
+										heroTotaldamage = irandom_range(-5, -10);
+										scrDamage(heroTotaldamage, optionTarget);
+									}
+									if (inv[selectedItem] == "EATHER"){
+										heroTotaldamage = irandom_range(5, 10);	
+										scrDamage(heroTotaldamage, optionTarget);
+									}
+															
 									heroToCommand.attack = true;
 									optionState = "MENU";
 								}

@@ -52,13 +52,13 @@ if (menuState == "MAIN"){
 		}
 	}
 	if (optionState == "ITEM"){
-		for (var item = 0; item < 3; item ++){
-			if (gaInv[heroToCommand.index, item] == "") itemName = "EMPTY"
-			else itemName = gaInv[heroToCommand.index, item];
+		for (var item = 0; item < 5; item ++){
+			if (inv[item] == "") itemName = "EMPTY"
+			else itemName = inv[item];
 			
-			draw_text(menuX + 100, menuY + (item * (fontSize + BUFFER)), itemName);
+			draw_text(menuX + 50, menuY + (item * (fontSize + BUFFER)), itemName);
 			
-			arrowX = (menuX + 100) - sprite_get_width(sSelector);
+			arrowX = (menuX + 50) - sprite_get_width(sSelector);
 			arrowY = menuY + (item * (fontSize + BUFFER));
 			if (item == selectedItem){
 				draw_sprite(sSelector, 0, arrowX, arrowY);
