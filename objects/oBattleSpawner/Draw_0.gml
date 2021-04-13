@@ -5,8 +5,9 @@ draw_set_color(c_white);
 draw_set_font(fMenu);
 
 fontSize = font_get_size(fMenu);
+draw_set_color(c_gray);
 
-BUFFER = 10;
+BUFFER = 12;
 menuX = (room_width / 2 ) + sprite_get_width(sSelector) + 120;
 menuY = room_height - ((fontSize + BUFFER) * (array_length_1d(aMenu)));
 
@@ -92,5 +93,7 @@ if (state = "BATTLE OVER"){
 	draw_set_valign(fa_middle);
 	draw_text(room_width / 2, room_height / 2, battleOverText);
 }
+
+
 
 

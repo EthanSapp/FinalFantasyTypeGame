@@ -39,11 +39,11 @@ if (state = "INIT"){
 	}
 	
 	//spawn monsters
-	totalMonsterGroups = 3;	 
+	totalMonsterGroups = irandom_range(1, 3);	 
 	
 	for (var i = 0; i < totalMonsterGroups; i ++){
 		monsterGroup = instance_create_depth(aMonsterPos[i, 0], aMonsterPos[i, 1], -100, oEnemies);
-		monsterGroup.type =	irandom(sEnemies);
+		monsterGroup.type =	irandom((sEnemies) - 1);
 		monsterGroup.number = irandom(maxMonstersPerGroup - 1) + 1;
 		monsterGroup.dead = false;
 		monsterGroup.stunned = 0;
@@ -204,32 +204,56 @@ if (state = "READY"){
 
 							} else {
 								if (dsMagic[| selectedSpell] <= 7){
+									healMPCost = 2;
+									hurtMPCost = 4;
 									if (dsMagic[| selectedSpell] == 6){
-										heroTotaldamage = irandom_range(-4, -8);
+										if (healMPCost <= gaHeroes[heroToCommand.index, 4]){
+											heroTotaldamage = irandom_range(-4, -8);
 										
-										scrDamage(heroTotaldamage, optionTarget);
+											scrDamage(heroTotaldamage, optionTarget);
+											gaHeroes[heroToCommand.index, 4] -= 2;
+										} else {
+											magicState = "MAIN";
+										}
 									} else if (dsMagic[| selectedSpell] == 7){
-										heroTotaldamage = irandom_range(4, 8);
+										if (hurtMPCost <= gaHeroes[heroToCommand.index, 4]){
+											heroTotaldamage = irandom_range(4, 8);
 										
-										scrDamage(heroTotaldamage, optionTarget);
+											scrDamage(heroTotaldamage, optionTarget);
+											gaHeroes[heroToCommand.index, 4] -= 4;
+										}  else {
+											magicState = "MAIN";
+										}
 									}
+
 								} else {
 									//stun
-									if (dsMagic[| selectedSpell] == 8){
-										chanceToStun = 50;
-										roll = irandom(99);
-										if (chanceToStun < roll){
-											optionTarget.stunned = 3;
-										}
+									stunMpCost = 1;
+									if (stunMpCost <= gaHeroes[heroToCommand.index, 4]){
+										if (dsMagic[| selectedSpell] == 8){
+											chanceToStun = 50;
+											roll = irandom(99);
+											if (chanceToStun < roll){
+												optionTarget.stunned = 3;
+											}
+											gaHeroes[heroToCommand.index, 4] -= stunMpCost;
 
+										}
+									} else {
+										magicState = "MAIN";
 									}
+									
 									//sleep
-									if (dsMagic[| selectedSpell] == 9){
-										chanceToSleep = 25;
-										roll = irandom(99);
+									sleepMpCost = 3;
+									if (sleepMpCost <= gaHeroes[heroToCommand.index, 4]){
+										if (dsMagic[| selectedSpell] == 9){
+											chanceToSleep = 25;
+											roll = irandom(99);
+											gaHeroes[heroToCommand.index, 4] -= sleepMpCost;
 										
-										if (chanceToSleep < roll){
-											optionTarget.isAsleep = true;
+											if (chanceToSleep < roll){
+												optionTarget.isAsleep = true;
+											}
 										}
 									}
 								}
@@ -479,5 +503,7 @@ if (state == "BATTLE OVER"){
 		}
 		
 		instance_destroy();
+		
+		room_goto(rMain);
 	}
 }

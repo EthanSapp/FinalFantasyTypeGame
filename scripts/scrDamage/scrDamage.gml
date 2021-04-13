@@ -31,6 +31,9 @@ function scrDamage(){
 			
 			if (gaHeroes[target.index, 2] <= 0){
 				target.dead = true;
+				if (gaHeroes[target.index, 2] <= 0){
+					gaHeroes[target.index, 2] = 0;
+				}
 				
 				pos = ds_list_find_index(dsTargetHeroes, target);
 				ds_list_delete(dsTargetHeroes, pos);

@@ -29,7 +29,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "players and enemies",
-    "path": "folders/Objects/players and enemies.yy",
+    "path": "folders/Objects/battle/players and enemies.yy",
   },
   "resourceVersion": "1.0",
   "name": "oHero",

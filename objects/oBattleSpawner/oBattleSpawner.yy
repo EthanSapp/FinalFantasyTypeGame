@@ -27,7 +27,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "batlle system",
-    "path": "folders/Objects/batlle system.yy",
+    "path": "folders/Objects/battle/batlle system.yy",
   },
   "resourceVersion": "1.0",
   "name": "oBattleSpawner",
