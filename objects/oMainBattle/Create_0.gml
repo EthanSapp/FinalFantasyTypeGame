@@ -149,9 +149,10 @@ gaMonsters[monsterCount, 9] = false; // knows sleep
 
 monsterCount ++;
 
-globalvar inv, potionAmount, eatherAmount, bombAmount, item;
-inv[item] = "POTION";
+globalvar inv, potionAmount, eatherAmount, bombAmount;
+inv[0] = "POTION";
 inv[1] = "EATHER";
 inv[2] = "BOMB";
 inv[3] = "REVIVE";
+inv[4] = "";
 
