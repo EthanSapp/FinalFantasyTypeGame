@@ -1,5 +1,7 @@
 if (room == rBattle){
 	#region battle system
+	battleAlreadyHappened = false
+	
 	#region init/reset
 
 	if (state = "INIT"){
@@ -16,9 +18,9 @@ if (room == rBattle){
 		dsTargetHeroes = ds_list_create();
 		dsTargetMonsters = ds_list_create();
 	
-		with(oHero){
-			instance_destroy();
-		}
+		//with(oHero){
+		//	instance_destroy();
+		//}
 	
 		with(oEnemies){
 			instance_destroy();
@@ -29,16 +31,19 @@ if (room == rBattle){
 	
 		heroX = room_width - 520;
 		heroY = 50;
-	
-		for (var i = 0; i < heroPartySize; i ++){
-			hero = instance_create_depth(heroX, heroY + (i * (sprite_get_height(sHero) + 20)), -100, oHero);
-			hero.index = i;
-			hero.dead = false;
-			hero.stunned = 0;
-			hero.isAsleep = false;
-			hero.isDefending = false;
-			global.heroHealth = gaHeroes[i, 2];
-			ds_list_add(dsTargetHeroes, hero);
+		if (battleAlreadyHappened == true){
+			instance_activate_object(oBattleSpawner);
+		} else {
+			for (var i = 0; i < heroPartySize; i ++){
+				hero = instance_create_depth(heroX, heroY + (i * (sprite_get_height(sHero) + 20)), -100, oHero);
+				hero.index = i;
+				hero.dead = false;
+				hero.stunned = 0;
+				hero.isAsleep = false;
+				hero.isDefending = false;
+				global.heroHealth = gaHeroes[i, 2];
+				ds_list_add(dsTargetHeroes, hero);
+			}
 		}
 	
 		//spawn monsters
@@ -543,16 +548,19 @@ if (room == rBattle){
 	if (state == "BATTLE OVER"){
 		timer ++;
 		if (keyboard_check(vk_space)) && (timer >= room_speed * 3){
-			//with(oHero){
-			//	instance_destroy();
-			//}
+			with(oHero){
+				instance_destroy();
+			}
+			
+			battleAlreadyHappened = true;
+			instance_deactivate_object(oBattleSpawner);
 		
-			//with(oEnemies){
-			//	instance_destroy();
-			//}
+			with(oEnemies){
+				instance_destroy();
+			}
 		
-			//instance_destroy();
-			global.heroHealth = gaHeroes[heroToCommand.index, 2];
+			instance_destroy();
+			//global.heroHealth = gaHeroes[heroToCommand.index, 2];
 			
 			room_restart();
 			
