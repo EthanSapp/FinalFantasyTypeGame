@@ -37,6 +37,7 @@ if (room == rBattle){
 			hero.stunned = 0;
 			hero.isAsleep = false;
 			hero.isDefending = false;
+			global.heroHealth = gaHeroes[i, 2];
 			ds_list_add(dsTargetHeroes, hero);
 		}
 	
@@ -542,17 +543,22 @@ if (room == rBattle){
 	if (state == "BATTLE OVER"){
 		timer ++;
 		if (keyboard_check(vk_space)) && (timer >= room_speed * 3){
-			with(oHero){
-				instance_destroy();
-			}
+			//with(oHero){
+			//	instance_destroy();
+			//}
 		
-			with(oEnemies){
-				instance_destroy();
-			}
+			//with(oEnemies){
+			//	instance_destroy();
+			//}
 		
-			instance_destroy();
-		
+			//instance_destroy();
+			global.heroHealth = gaHeroes[heroToCommand.index, 2];
+			
+			room_restart();
+			
 			room_goto(rMain);
+			
+			
 		}
 	}
 	#endregion
