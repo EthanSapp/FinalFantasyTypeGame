@@ -67,6 +67,7 @@ if (room == rBattle){
 	
 		menuState = "MAIN";
 		menuSelected = 0;
+		selectedItem = 0
 	
 	
 		if (ds_exists(dsHeroes, ds_type_list)){
@@ -272,7 +273,7 @@ if (room == rBattle){
 						#endregion
 						//item
 						if (menuSelected == 2){
-							selectedItem = 0
+							
 							if (optionState != "ITEM") && (optionState != "CHOOSE TARGET"){
 								optionState = "ITEM";
 							} else {
@@ -280,7 +281,7 @@ if (room == rBattle){
 									if (selectedItem  != ""){
 										optionTarget = heroToCommand;
 										selectedActor = heroToCommand.index
-										selectedItem = array_length_1d(inv);
+										//selectedItem = 0;
 										optionState = "CHOOSE TARGET"
 										
 									}
@@ -289,13 +290,28 @@ if (room == rBattle){
 										heroToCommand = ds_list_find_value(dsHeroes, 0);
 									
 										//selectedItem = 0;
-										if (inv[selectedItem] == "POTION"){
-											heroTotaldamage = irandom_range(-5, -10);
-											scrDamage(heroTotaldamage, optionTarget);
+										if (selectedItem == 0){
+											//potion
+											potionAddAmount = 10
+											if ((potionAddAmount + gaHeroes[heroToCommand.index, 2]) <= (potionAddAmount - gaHeroes[heroToCommand.index, 1])){
+											gaHeroes[heroToCommand.index, 2] += potionAddAmount;
+											}
 										}
-										if (inv[selectedItem] == "EATHER"){
-											heroTotaldamage = irandom_range(1,5);
-											scrDamage(heroTotaldamage, optionTarget);
+										if (selectedItem == 1){
+											//aether
+											aetherAddAmount = 10;
+											if ((aetherAddAmount + gaHeroes[heroToCommand.index, 4]) <= (aetherAddAmount - gaHeroes[heroToCommand.index, 3])){
+											gaHeroes[heroToCommand.index, 4] += aetherAddAmount;
+											} else {
+												ds_list_delete(dsHeroes, 0);
+												heroToCommand.attack = true;
+												optionState = "MENU";
+												menuState = "MAIN";
+											}
+										}
+										if (selectedItem = 2){
+										
+											
 										}
 										
 
@@ -411,18 +427,35 @@ if (room == rBattle){
 					}
 					if (optionState == "ITEM"){
 						totalItems = 4;
-						if (keyboard_check_pressed(vk_up)){
-							if (selectedItem == 0){
-								selectedItem = totalItems
+						/*
+							if (keyboard_check_pressed(vk_up)){
+							if ((menuSelected - 1) >= 0){
+								menuSelected --;
 							} else {
-								selectedItem --
+								menuSelected = array_length_1d(aMenu) - 1;
+							}
+						}
+
+						if (keyboard_check_pressed(vk_down)){
+							if ((menuSelected + 1) < array_length_1d(aMenu)){
+								menuSelected ++;
+							} else {
+								menuSelected = 0;
+							}
+						}
+						*/
+						if (keyboard_check_pressed(vk_up)){
+							if ((selectedItem) >= 0){
+								selectedItem --;
+							} else {
+								selectedItem = array_length_1d(inv) - 1;
 							}
 						}
 						if (keyboard_check_pressed(vk_down)){
-							if (selectedItem == totalItems){
-								selectedItem = 0;
-							} else {
+							if ((selectedItem + 1) < array_length_1d(inv)){
 								selectedItem ++;
+							} else {
+								selectedItem = 0;
 							}
 						}
 					}
@@ -523,4 +556,10 @@ if (room == rBattle){
 		}
 	}
 	#endregion
+}
+
+if (room != rBattle){
+	if (keyboard_check_pressed(vk_escape)){
+		room_goto(rBattle);
+	}
 }

@@ -31,3 +31,9 @@ aSpell[6] = "HEAL";
 aSpell[7] = "HURT";
 aSpell[8] = "STUN";
 aSpell[9] = "SLEEP";
+
+inv[0] = "POTION";
+inv[1] = "AETHER";
+inv[2] = "BOMB";
+inv[3] = "REVIVE";
+inv[4] = "";
