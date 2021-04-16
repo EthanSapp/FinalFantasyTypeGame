@@ -9,5 +9,5 @@ function saveBattleSystem(){
 	//ini_write_real("Save1", "playerMP", gaHeroes[hero.index, 4]);
 	ini_close();
 	
-	battleAlreadyHappened = true;
+	//battleAlreadyHappened = true;
 }

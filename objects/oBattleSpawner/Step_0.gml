@@ -35,12 +35,11 @@ if (room == rBattle){
 			for (var i = 0; i < heroPartySize; i ++){
 				hero = instance_create_depth(heroX, heroY + (i * (sprite_get_height(sHero) + 20)), -100, oHero);
 				hero.index = i;
-				loadBattleSystem();
 				hero.dead = false;
 				hero.stunned = 0;
 				hero.isAsleep = false;
 				hero.isDefending = false;
-				hero.hp = gaHeroes[hero.index, 2];
+				hero.hp = loadBattleSystem();
 				ds_list_add(dsTargetHeroes, hero);
 			}
 		}
@@ -52,7 +51,7 @@ if (room == rBattle){
 				hero.stunned = 0;
 				hero.isAsleep = false;
 				hero.isDefending = false;
-				hero.hp = gaHeroes[hero.index, 2];
+				hero.hp = loadBattleSystem();
 				ds_list_add(dsTargetHeroes, hero);
 			
 			
