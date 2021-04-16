@@ -38,7 +38,9 @@ inv[2] = "";
 inv[3] = "";
 inv[4] = "";
 
-globalvar gaHeroes, gaMonsters;
+globalvar gaHeroes, gaMonsters, currentHealth, currentMP, battleAlreadyHappened, heroCount;
+
+battleAlreadyHappened = false;
 
 heroCount = 0;
 

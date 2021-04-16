@@ -1,6 +1,6 @@
 if (room == rBattle){
 	#region battle system
-	battleAlreadyHappened = false
+	
 	
 	#region init/reset
 
@@ -18,9 +18,9 @@ if (room == rBattle){
 		dsTargetHeroes = ds_list_create();
 		dsTargetMonsters = ds_list_create();
 	
-		//with(oHero){
-		//	instance_destroy();
-		//}
+		with(oHero){
+			instance_destroy();
+		}
 	
 		with(oEnemies){
 			instance_destroy();
@@ -32,8 +32,19 @@ if (room == rBattle){
 		heroX = room_width - 520;
 		heroY = 50;
 		if (battleAlreadyHappened == true){
-			instance_activate_object(oBattleSpawner);
-		} else {
+			for (var i = 0; i < heroPartySize; i ++){
+				hero = instance_create_depth(heroX, heroY + (i * (sprite_get_height(sHero) + 20)), -100, oHero);
+				hero.index = i;
+				loadBattleSystem();
+				hero.dead = false;
+				hero.stunned = 0;
+				hero.isAsleep = false;
+				hero.isDefending = false;
+				hero.hp = gaHeroes[hero.index, 2];
+				ds_list_add(dsTargetHeroes, hero);
+			}
+		}
+		if(battleAlreadyHappened == false){
 			for (var i = 0; i < heroPartySize; i ++){
 				hero = instance_create_depth(heroX, heroY + (i * (sprite_get_height(sHero) + 20)), -100, oHero);
 				hero.index = i;
@@ -41,13 +52,16 @@ if (room == rBattle){
 				hero.stunned = 0;
 				hero.isAsleep = false;
 				hero.isDefending = false;
-				global.heroHealth = gaHeroes[i, 2];
+				hero.hp = gaHeroes[hero.index, 2];
 				ds_list_add(dsTargetHeroes, hero);
+			
+			
 			}
+			battleAlreadyHappened = true;
 		}
 	
 		//spawn monsters
-		totalMonsterGroups = irandom_range(1, 3);	 
+		totalMonsterGroups = array_height_2d(gaMonsters);	 
 	
 		for (var i = 0; i < totalMonsterGroups; i ++){
 			monsterGroup = instance_create_depth(aMonsterPos[i, 0], aMonsterPos[i, 1], -100, oEnemies);
@@ -123,6 +137,7 @@ if (room == rBattle){
 			}
 		
 			if (actionState == "READY"){
+
 			
 				heroToCommand = dsHeroes[| 0];
 			
@@ -552,24 +567,26 @@ if (room == rBattle){
 				instance_destroy();
 			}
 			
-			battleAlreadyHappened = true;
-			instance_deactivate_object(oBattleSpawner);
+
 		
 			with(oEnemies){
 				instance_destroy();
 			}
-		
-			instance_destroy();
-			//global.heroHealth = gaHeroes[heroToCommand.index, 2];
+
+			saveBattleSystem();
+
+
 			
-			room_restart();
+
 			
 			room_goto(rMain);
 			
 			
 		}
+		
 	}
 	#endregion
+
 }
 
 if (room != rBattle){
