@@ -39,7 +39,6 @@ if (room == rBattle){
 				hero.stunned = 0;
 				hero.isAsleep = false;
 				hero.isDefending = false;
-				hero.hp = loadBattleSystem();
 				ds_list_add(dsTargetHeroes, hero);
 			}
 		}
@@ -51,7 +50,6 @@ if (room == rBattle){
 				hero.stunned = 0;
 				hero.isAsleep = false;
 				hero.isDefending = false;
-				hero.hp = loadBattleSystem();
 				ds_list_add(dsTargetHeroes, hero);
 			
 			
@@ -353,8 +351,10 @@ if (room == rBattle){
 							heroToCommand = ds_list_find_value(dsHeroes, 0);
 									
 						
+							ds_list_delete(dsHeroes, 0);
 							heroToCommand.attack = true;
 							optionState = "MENU";
+							menuState = "MAIN";
 						}
 						//flee
 						if (menuSelected == 4){
@@ -366,8 +366,10 @@ if (room == rBattle){
 									heroToCommand = ds_list_find_value(dsHeroes, 0);
 									
 						
+									ds_list_delete(dsHeroes, 0);
 									heroToCommand.attack = true;
 									optionState = "MENU";
+									menuState = "MAIN";
 								} else {
 									battleOverText = "THE HEROES RAN AWAY!";
 									state = "BATTLE OVER";
@@ -571,8 +573,6 @@ if (room == rBattle){
 			with(oEnemies){
 				instance_destroy();
 			}
-
-			saveBattleSystem();
 
 
 			

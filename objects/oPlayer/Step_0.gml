@@ -1,20 +1,21 @@
-if (keyboard_check(ord("W"))){
-	y -= 3;
+depth = -y;
+if (keyboard_check(ord("W")) && (!place_meeting(x , y - 2, oWall))){
+	y -= 2;
 	ministeps ++;
 }
 
-if (keyboard_check(ord("S"))){
-	y += 3;
+if (keyboard_check(ord("S")) && (!place_meeting(x, y + 2, oWall))){
+	y += 2;
 	ministeps ++;
 }
 
-if (keyboard_check(ord("D"))){
-	x += 3;
+if (keyboard_check(ord("D")) && (!place_meeting(x + 2, y, oWall))){
+	x += 2;
 	ministeps ++;
 }
 
-if (keyboard_check(ord("A"))){
-	x -= 3;
+if (keyboard_check(ord("A")) && (!place_meeting(x - 2, y, oWall))){
+	x -= 2;
 	ministeps ++;
 }
 
