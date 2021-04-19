@@ -31,32 +31,15 @@ if (room == rBattle){
 	
 		heroX = room_width - 520;
 		heroY = 50;
-		if (battleAlreadyHappened == true){
-			for (var i = 0; i < heroPartySize; i ++){
-				hero = instance_create_depth(heroX, heroY + (i * (sprite_get_height(sHero) + 20)), -100, oHero);
-				hero.index = i;
-				hero.dead = false;
-				hero.stunned = 0;
-				hero.isAsleep = false;
-				hero.isDefending = false;
-				ds_list_add(dsTargetHeroes, hero);
-			}
+		for (var i = 0; i < heroPartySize; i ++){
+			hero = instance_create_depth(heroX, heroY + (i * (sprite_get_height(sHero) + 20)), -100, oHero);
+			hero.index = i;
+			hero.dead = false;
+			hero.stunned = 0;
+			hero.isAsleep = false;
+			hero.isDefending = false;
+			ds_list_add(dsTargetHeroes, hero);
 		}
-		if(battleAlreadyHappened == false){
-			for (var i = 0; i < heroPartySize; i ++){
-				hero = instance_create_depth(heroX, heroY + (i * (sprite_get_height(sHero) + 20)), -100, oHero);
-				hero.index = i;
-				hero.dead = false;
-				hero.stunned = 0;
-				hero.isAsleep = false;
-				hero.isDefending = false;
-				ds_list_add(dsTargetHeroes, hero);
-			
-			
-			}
-			battleAlreadyHappened = true;
-		}
-	
 		//spawn monsters
 		totalMonsterGroups = array_height_2d(gaMonsters);	 
 	
