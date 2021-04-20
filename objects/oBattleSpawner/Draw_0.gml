@@ -7,7 +7,7 @@ if (room = rBattle){
 	draw_set_font(fMenu);
 
 	fontSize = font_get_size(fMenu);
-	draw_set_color(c_gray);
+	draw_set_color(c_black);
 
 	BUFFER = 12;
 	menuX = (room_width / 2 ) + sprite_get_width(sSelector) + 120;

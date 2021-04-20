@@ -30,11 +30,15 @@ if (room == rBattle){
 		heroPartySize = array_height_2d(gaHeroes);
 	
 		heroX = room_width - 520;
-		heroY = 50;
+		heroY = 75;
 		for (var i = 0; i < heroPartySize; i ++){
 			hero = instance_create_depth(heroX, heroY + (i * (sprite_get_height(sHero) + 20)), -100, oHero);
 			hero.index = i;
-			hero.dead = false;
+			if (gaHeroes[i, 2] <= 0){
+				hero.dead = true;
+			} else {
+				hero.dead = false;
+			}
 			hero.stunned = 0;
 			hero.isAsleep = false;
 			hero.isDefending = false;
