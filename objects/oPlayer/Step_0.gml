@@ -94,12 +94,13 @@ if (ministeps == 50){
 
 chanceOfbattle = irandom_range(min_, max_);
 if (steps == chanceOfbattle){
-	//room_goto(rBattle);
-	steps = 0;
-	ministeps = 0;
 	if (!instance_exists(oFade)){
 		fadeToRoom(rBattle, 60, c_white);
 	}
+	//room_goto(rBattle);
+	steps = 0;
+	ministeps = 0;
+	
 }
 
 
