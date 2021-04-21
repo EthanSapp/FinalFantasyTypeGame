@@ -2,11 +2,11 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "saving battle system",
-    "path": "folders/Scripts/saving battle system.yy",
+    "name": "Scripts",
+    "path": "folders/Scripts.yy",
   },
   "resourceVersion": "1.0",
-  "name": "saveBattleSystem",
+  "name": "fadeToRoom",
   "tags": [],
   "resourceType": "GMScript",
 }

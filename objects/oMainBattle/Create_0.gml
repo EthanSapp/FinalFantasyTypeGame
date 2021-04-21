@@ -2,9 +2,8 @@
 
 
 
-globalvar gaHeroes, gaMonsters, currentHealth, currentMP, battleAlreadyHappened, heroCount;
+globalvar gaHeroes, gaMonsters, currentHealth, currentMP, heroCount, monsterCount;
 
-battleAlreadyHappened = false;
 
 heroCount = 0;
 

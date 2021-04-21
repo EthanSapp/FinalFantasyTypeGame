@@ -45,16 +45,16 @@ if (room == rBattle){
 			ds_list_add(dsTargetHeroes, hero);
 		}
 		//spawn monsters
-		totalMonsterGroups = array_height_2d(gaMonsters);	 
+		totalMonsterGroups = 3;	 
 	
 		for (var i = 0; i < totalMonsterGroups; i ++){
 			monsterGroup = instance_create_depth(aMonsterPos[i, 0], aMonsterPos[i, 1], -100, oEnemies);
 			monsterGroup.type =	irandom((sEnemies) - 1);
-			monsterGroup.number = irandom(maxMonstersPerGroup - 1) + 1;
+			monsterGroup.number = 1
 			monsterGroup.dead = false;
 			monsterGroup.stunned = 0;
 			monsterGroup.isAsleep = false;
-			monsterGroup.hp  = gaMonsters[monsterGroup.type, 1];
+			monsterGroup.hp  = gaMonsters[i, 1];
 			ds_list_add(dsTargetMonsters, monsterGroup);
 		}
 	
@@ -564,8 +564,9 @@ if (room == rBattle){
 
 			
 
-			
-			room_goto(rMain);
+			if (!instance_exists(oFade)){
+				fadeToRoom(rMain, 60, c_white);
+			}
 			
 			
 		}
@@ -577,6 +578,8 @@ if (room == rBattle){
 
 if (room != rBattle){
 	if (keyboard_check_pressed(vk_escape)){
-		room_goto(rBattle);
+		if (!instance_exists(oFade)){
+			fadeToRoom(rBattle, 90, c_white);
+		}
 	}
 }

@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "sMainCharacter",
-    "path": "sprites/sMainCharacter/sMainCharacter.yy",
+    "name": "s_player_run_down",
+    "path": "sprites/s_player_run_down/s_player_run_down.yy",
   },
   "solid": false,
   "visible": true,
