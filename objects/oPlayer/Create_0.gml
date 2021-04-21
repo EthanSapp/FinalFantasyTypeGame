@@ -1,4 +1,5 @@
 image_speed = 0;
+//depth = -y;
 
 spd = 2;
 

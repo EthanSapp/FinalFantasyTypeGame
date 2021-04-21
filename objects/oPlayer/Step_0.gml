@@ -1,4 +1,4 @@
-depth = -y;
+//depth = -y;
 image_speed = 0;
 
 var moveHorizontal = (keyboard_check(ord("D")) - keyboard_check(ord("A")));
@@ -9,15 +9,15 @@ var moveVertical = (keyboard_check(ord("S")) - keyboard_check(ord("W")));
 
 vsp = moveVertical * spd;
 
-if (place_meeting(x + hsp, y, oWall)){
-	while(!place_meeting(x + sign(hsp), y, oWall)){
+if (place_meeting(x + hsp * 2, y, oWall)){
+	while(!place_meeting(x + sign(hsp) * 2, y, oWall)){
 		x += sign(hsp)
 	}
 	hsp = 0;
 }
 
-if (place_meeting(x, y + vsp, oWall)){
-	while(!place_meeting(x, y + sign(vsp), oWall)){
+if (place_meeting(x, y + vsp * 2, oWall)){
+	while(!place_meeting(x, y + sign(vsp) * 2, oWall)){
 		y += sign(vsp)
 	}
 	vsp = 0;
@@ -87,17 +87,15 @@ if (hsp > 0){
 
 min_ = 10;
 max_ = 30;
-if (ministeps == 50){
+if (ministeps == 75){
 	steps ++;
 	ministeps = 0;
 }
 
 chanceOfbattle = irandom_range(min_, max_);
 if (steps == chanceOfbattle){
-	if (!instance_exists(oFade)){
-		fadeToRoom(rBattle, 60, c_white);
-	}
-	//room_goto(rBattle);
+	instance_create_depth(0, 0, 0, oFade);
+	room_goto(rBattle);
 	steps = 0;
 	ministeps = 0;
 	

@@ -565,7 +565,8 @@ if (room == rBattle){
 			
 
 			if (!instance_exists(oFade)){
-				fadeToRoom(rMain, 60, c_white);
+				instance_create_depth(0, 0, 0, oFade);
+				room_goto(rMain);
 			}
 			
 			
@@ -578,8 +579,7 @@ if (room == rBattle){
 
 if (room != rBattle){
 	if (keyboard_check_pressed(vk_escape)){
-		if (!instance_exists(oFade)){
-			fadeToRoom(rBattle, 90, c_white);
-		}
+		instance_create_depth(0, 0, 0, oFade);
+		room_goto(rBattle)
 	}
 }
