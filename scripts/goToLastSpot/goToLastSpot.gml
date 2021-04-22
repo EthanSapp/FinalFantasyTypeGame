@@ -2,6 +2,6 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function goToLastSpot(){
 	room_goto_previous();
-	oPlayer.x = xprevious;
-	oPlayer.y = yprevious;
+	x = xprevious;
+	y = yprevious;
 }
