@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "sWall",
-    "path": "sprites/sWall/sWall.yy",
+    "name": "sStartPOS",
+    "path": "sprites/sStartPOS/sStartPOS.yy",
   },
   "solid": false,
   "visible": false,
@@ -28,7 +28,7 @@
     "path": "folders/Objects/collisions.yy",
   },
   "resourceVersion": "1.0",
-  "name": "oWall",
+  "name": "oStartPOS",
   "tags": [],
   "resourceType": "GMObject",
 }

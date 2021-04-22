@@ -1,4 +1,4 @@
-//depth = -y;
+depth = -y;
 image_speed = 0;
 
 var moveHorizontal = (keyboard_check(ord("D")) - keyboard_check(ord("A")));

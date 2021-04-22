@@ -68,8 +68,8 @@
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"21b8bd98-31d7-4012-bd41-07035c8a55c4","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "UI sprites",
+    "path": "folders/Sprites/UI sprites.yy",
   },
   "resourceVersion": "1.0",
   "name": "sSelector",

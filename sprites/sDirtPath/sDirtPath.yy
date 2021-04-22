@@ -68,8 +68,8 @@
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"055e961b-9b45-4a06-aa9c-cb87b58bd73d","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "world sprites",
+    "path": "folders/Sprites/world sprites.yy",
   },
   "resourceVersion": "1.0",
   "name": "sDirtPath",

@@ -25,7 +25,7 @@
     4278255615,
     4278255360,
     4294967040,
-    4294901760,
+    2197749760,
     4294902015,
     4294967295,
     4293717228,
@@ -34,7 +34,7 @@
     4291677645,
     4290230199,
     4287993237,
-    2099518702,
+    4280556782,
     4278252287,
     4283540992,
     4293963264,
@@ -103,12 +103,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"59168001-18b8-4a82-b17c-b3644ac0037b","path":"sprites/sWall/sWall.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"59168001-18b8-4a82-b17c-b3644ac0037b","path":"sprites/sWall/sWall.yy",},"LayerId":{"name":"1aaf4681-29f1-4097-a763-38d8c38cd962","path":"sprites/sWall/sWall.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sWall","path":"sprites/sWall/sWall.yy",},"resourceVersion":"1.0","name":"59168001-18b8-4a82-b17c-b3644ac0037b","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"28933681-a772-4c6d-9fec-a06b20ec2f5b","path":"sprites/sDoor/sDoor.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"28933681-a772-4c6d-9fec-a06b20ec2f5b","path":"sprites/sDoor/sDoor.yy",},"LayerId":{"name":"56e2770f-a805-44b3-83c3-39237d253995","path":"sprites/sDoor/sDoor.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sDoor","path":"sprites/sDoor/sDoor.yy",},"resourceVersion":"1.0","name":"28933681-a772-4c6d-9fec-a06b20ec2f5b","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
-    "spriteId": {"name":"sWall","path":"sprites/sWall/sWall.yy",},
+    "spriteId": {"name":"sDoor","path":"sprites/sDoor/sDoor.yy",},
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 30.0,
@@ -120,7 +120,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"ab55c1c3-fdcb-4975-a54b-7697864f9da4","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"59168001-18b8-4a82-b17c-b3644ac0037b","path":"sprites/sWall/sWall.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"828cdcea-3d8b-42c4-8bc7-624959dcc7d9","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"28933681-a772-4c6d-9fec-a06b20ec2f5b","path":"sprites/sDoor/sDoor.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"modifiers":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack",},
     ],
     "visibleRange": null,
@@ -137,21 +137,21 @@
     "yorigin": 0,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sWall","path":"sprites/sWall/sWall.yy",},
+    "parent": {"name":"sDoor","path":"sprites/sDoor/sDoor.yy",},
     "resourceVersion": "1.3",
-    "name": "sWall",
+    "name": "sDoor",
     "tags": [],
     "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"1aaf4681-29f1-4097-a763-38d8c38cd962","tags":[],"resourceType":"GMImageLayer",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"56e2770f-a805-44b3-83c3-39237d253995","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
     "name": "collision sprites",
     "path": "folders/Sprites/collision sprites.yy",
   },
   "resourceVersion": "1.0",
-  "name": "sWall",
+  "name": "sDoor",
   "tags": [],
   "resourceType": "GMSprite",
 }

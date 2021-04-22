@@ -68,8 +68,8 @@
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"19f1b578-6941-46d0-a98f-c8aec6f3df42","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "UI sprites",
+    "path": "folders/Sprites/UI sprites.yy",
   },
   "resourceVersion": "1.0",
   "name": "sTextBox",

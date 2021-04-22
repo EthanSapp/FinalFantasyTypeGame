@@ -68,8 +68,8 @@
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"5094b737-d5c6-46e0-86a7-51346053dd91","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "world sprites",
+    "path": "folders/Sprites/world sprites.yy",
   },
   "resourceVersion": "1.0",
   "name": "sDirtWall",

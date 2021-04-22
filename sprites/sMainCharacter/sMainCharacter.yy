@@ -68,8 +68,8 @@
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"4be1f41f-4bae-459d-8613-9a35bdb58caf","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "player sprites",
+    "path": "folders/Sprites/player sprites.yy",
   },
   "resourceVersion": "1.0",
   "name": "sMainCharacter",

@@ -566,7 +566,7 @@ if (room == rBattle){
 
 			if (!instance_exists(oFade)){
 				instance_create_depth(0, 0, 0, oFade);
-				room_goto(rMain);
+				goToLastSpot();
 			}
 			
 			

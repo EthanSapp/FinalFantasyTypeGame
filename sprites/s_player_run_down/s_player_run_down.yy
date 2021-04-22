@@ -88,8 +88,8 @@
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"0a903f3c-e93a-44dc-8ba2-d886214deb29","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "player sprites",
+    "path": "folders/Sprites/player sprites.yy",
   },
   "resourceVersion": "1.0",
   "name": "s_player_run_down",

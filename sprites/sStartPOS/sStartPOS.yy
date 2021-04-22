@@ -22,7 +22,7 @@
   },
   "swatchColours": [
     4278190335,
-    4278255615,
+    2181103615,
     4278255360,
     4294967040,
     4294901760,
@@ -34,7 +34,7 @@
     4291677645,
     4290230199,
     4287993237,
-    2099518702,
+    4280556782,
     4278252287,
     4283540992,
     4293963264,
@@ -103,12 +103,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"59168001-18b8-4a82-b17c-b3644ac0037b","path":"sprites/sWall/sWall.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"59168001-18b8-4a82-b17c-b3644ac0037b","path":"sprites/sWall/sWall.yy",},"LayerId":{"name":"1aaf4681-29f1-4097-a763-38d8c38cd962","path":"sprites/sWall/sWall.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sWall","path":"sprites/sWall/sWall.yy",},"resourceVersion":"1.0","name":"59168001-18b8-4a82-b17c-b3644ac0037b","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"636fd305-4fd6-4a46-8152-28c267508b7f","path":"sprites/sStartPOS/sStartPOS.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"636fd305-4fd6-4a46-8152-28c267508b7f","path":"sprites/sStartPOS/sStartPOS.yy",},"LayerId":{"name":"706083f9-15bf-4ff0-b13e-f4bf980fdf65","path":"sprites/sStartPOS/sStartPOS.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sStartPOS","path":"sprites/sStartPOS/sStartPOS.yy",},"resourceVersion":"1.0","name":"636fd305-4fd6-4a46-8152-28c267508b7f","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
-    "spriteId": {"name":"sWall","path":"sprites/sWall/sWall.yy",},
+    "spriteId": {"name":"sStartPOS","path":"sprites/sStartPOS/sStartPOS.yy",},
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 30.0,
@@ -120,7 +120,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"ab55c1c3-fdcb-4975-a54b-7697864f9da4","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"59168001-18b8-4a82-b17c-b3644ac0037b","path":"sprites/sWall/sWall.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"e8c9b1ab-a0db-498f-aa01-f07667a0e615","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"636fd305-4fd6-4a46-8152-28c267508b7f","path":"sprites/sStartPOS/sStartPOS.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"modifiers":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack",},
     ],
     "visibleRange": null,
@@ -137,21 +137,21 @@
     "yorigin": 0,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sWall","path":"sprites/sWall/sWall.yy",},
+    "parent": {"name":"sStartPOS","path":"sprites/sStartPOS/sStartPOS.yy",},
     "resourceVersion": "1.3",
-    "name": "sWall",
+    "name": "sStartPOS",
     "tags": [],
     "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"1aaf4681-29f1-4097-a763-38d8c38cd962","tags":[],"resourceType":"GMImageLayer",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"706083f9-15bf-4ff0-b13e-f4bf980fdf65","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
     "name": "collision sprites",
     "path": "folders/Sprites/collision sprites.yy",
   },
   "resourceVersion": "1.0",
-  "name": "sWall",
+  "name": "sStartPOS",
   "tags": [],
   "resourceType": "GMSprite",
 }

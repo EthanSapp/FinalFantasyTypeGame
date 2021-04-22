@@ -1,10 +1,7 @@
 {
-  "spriteId": {
-    "name": "sWall",
-    "path": "sprites/sWall/sWall.yy",
-  },
+  "spriteId": null,
   "solid": false,
-  "visible": false,
+  "visible": true,
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": null,
@@ -20,15 +17,17 @@
   "physicsStartAwake": true,
   "physicsKinematic": false,
   "physicsShapePoints": [],
-  "eventList": [],
+  "eventList": [
+    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"parent":{"name":"yah","path":"objects/yah/yah.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+  ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "collisions",
-    "path": "folders/Objects/collisions.yy",
+    "name": "managers",
+    "path": "folders/Objects/managers.yy",
   },
   "resourceVersion": "1.0",
-  "name": "oWall",
+  "name": "yah",
   "tags": [],
   "resourceType": "GMObject",
 }
