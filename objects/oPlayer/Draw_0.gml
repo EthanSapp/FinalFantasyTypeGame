@@ -1,1 +1,3 @@
-draw_self();
+if (room != rBattle){
+	draw_self();
+}
