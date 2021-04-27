@@ -11,3 +11,4 @@ if (instance_exists(player_start_position)){
 	}
 	player_start_position  = noone;
 }
+

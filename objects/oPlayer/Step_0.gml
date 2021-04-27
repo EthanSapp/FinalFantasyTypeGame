@@ -48,42 +48,9 @@ if (hsp > 0){
 	image_index = 0;
 }
 
-
- 
-
-
-
-
-
-//if (keyboard_check(ord("W")) && (!place_meeting(x , y - 2, oWall))){
-//	y -= 2;
-//	ministeps ++;
-//	sprite_index = s_player_run_up
-//	image_speed = 1;
-//}
-
-//if (keyboard_check(ord("S")) && (!place_meeting(x, y + 2, oWall))){
-//	y += 2;
-//	ministeps ++;
-//	sprite_index = s_player_run_down;
-//	image_speed = 1;
-//}
-
-//if (keyboard_check(ord("D")) && (!place_meeting(x + 2, y, oWall))){
-//	x += 2;
-//	ministeps ++;
-//	sprite_index = s_player_run_right;
-//	image_speed = 1;
-//}
-
-//if (keyboard_check(ord("A")) && (!place_meeting(x - 2, y, oWall))){
-//	x -= 2;
-//	ministeps ++;
-//	sprite_index = s_player_run_left;
-//	image_speed = 1;
-//}
-
-
+if (distance_to_object(oSwordInStone) < 10) && keyboard_check_pressed(ord("E")){
+	oSwordInStone.image_index = 0;
+}
 
 min_ = 10;
 max_ = 30;
