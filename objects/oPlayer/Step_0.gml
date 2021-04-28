@@ -64,6 +64,7 @@ if (ministeps == 75){
 global.chanceOfbattle = irandom_range(min_, max_);
 if (steps == global.chanceOfbattle){
 	instance_create_depth(0, 0, 0, oFade);
+	instance_create_layer(oPlayer.x, oPlayer.x, "Instances", oCheckPoint);
 	room_goto(rBattle);
 	steps = 0;
 	ministeps = 0;

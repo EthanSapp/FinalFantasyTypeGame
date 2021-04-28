@@ -9,7 +9,7 @@ steps = 0;
 ministeps = 0
 ministeps = 0
 
-if (global.checkpointR == room){
-	x = global.checkpointX;
-	y = global.checkpointY;
-}
+//if (global.checkpointR == room){
+//	x = global.checkpointX;
+//	y = global.checkpointY;
+//}
