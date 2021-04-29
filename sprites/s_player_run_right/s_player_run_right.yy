@@ -88,8 +88,8 @@
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"2c0b5831-e736-4f19-ac72-2e06cfcaad67","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
-    "name": "player sprites",
-    "path": "folders/Sprites/player sprites.yy",
+    "name": "old character",
+    "path": "folders/Sprites/player sprites/old character.yy",
   },
   "resourceVersion": "1.0",
   "name": "s_player_run_right",

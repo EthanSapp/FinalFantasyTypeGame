@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "sHero",
-    "path": "sprites/sHero/sHero.yy",
+    "name": "sPlayerBattle",
+    "path": "sprites/sPlayerBattle/sPlayerBattle.yy",
   },
   "solid": false,
   "visible": true,

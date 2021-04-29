@@ -80,8 +80,8 @@
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"fa02d51c-e08a-4208-9f82-3bee69cc87ee","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
-    "name": "player sprites",
-    "path": "folders/Sprites/player sprites.yy",
+    "name": "old character",
+    "path": "folders/Sprites/player sprites/old character.yy",
   },
   "resourceVersion": "1.0",
   "name": "sHero",

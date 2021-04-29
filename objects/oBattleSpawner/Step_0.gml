@@ -30,7 +30,7 @@ if (room == rBattle){
 		heroPartySize = array_height_2d(gaHeroes);
 	
 		heroX = room_width - 520;
-		heroY = 75;
+		heroY = 50;
 		for (var i = 0; i < heroPartySize; i ++){
 			hero = instance_create_depth(heroX, heroY + (i * (sprite_get_height(sHero) + 20)), -100, oHero);
 			hero.index = i;

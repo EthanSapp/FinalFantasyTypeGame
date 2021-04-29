@@ -27,21 +27,19 @@ if (room != rBattle){
 
 	y += vsp;
 	if (hsp > 0){
-		sprite_index = s_player_run_right;
-		image_xscale = 1;
+		sprite_index = sPlayerRunRight;
 		image_speed = 1;
 		ministeps ++;
 	} else if (hsp < 0){
-		sprite_index = s_player_run_right;
-		image_xscale = -1;
+		sprite_index = sPlayerRunLeft;
 		image_speed = 1
 		ministeps ++;
 	} else if (vsp > 0){
-		sprite_index = s_player_run_down;
+		sprite_index = sPlayerRunDown;
 		image_speed = 1;
 		ministeps ++;
 	} else if (vsp < 0) {
-		sprite_index = s_player_run_up;
+		sprite_index = sPlayerRunUp;
 		image_speed = 1;
 		ministeps ++;
 	} else {
