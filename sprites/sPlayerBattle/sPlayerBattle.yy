@@ -7,14 +7,14 @@
   "edgeFiltering": false,
   "collisionTolerance": 0,
   "swfPrecision": 2.525,
-  "bbox_left": 2,
-  "bbox_right": 27,
-  "bbox_top": 20,
+  "bbox_left": 8,
+  "bbox_right": 57,
+  "bbox_top": 0,
   "bbox_bottom": 63,
   "HTile": false,
   "VTile": false,
   "For3D": false,
-  "width": 32,
+  "width": 64,
   "height": 64,
   "textureGroupId": {
     "name": "Default",
@@ -24,18 +24,18 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"5481007c-d4ad-467e-beaf-7008a33613a0","path":"sprites/sPlayerBattle/sPlayerBattle.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"5481007c-d4ad-467e-beaf-7008a33613a0","path":"sprites/sPlayerBattle/sPlayerBattle.yy",},"LayerId":{"name":"28940e55-c67e-444d-9b41-d22bded9a1d7","path":"sprites/sPlayerBattle/sPlayerBattle.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sPlayerBattle","path":"sprites/sPlayerBattle/sPlayerBattle.yy",},"resourceVersion":"1.0","name":"5481007c-d4ad-467e-beaf-7008a33613a0","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"ea361a69-aa5f-448e-818c-7877a8e59a2d","path":"sprites/sPlayerBattle/sPlayerBattle.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"ea361a69-aa5f-448e-818c-7877a8e59a2d","path":"sprites/sPlayerBattle/sPlayerBattle.yy",},"LayerId":{"name":"28940e55-c67e-444d-9b41-d22bded9a1d7","path":"sprites/sPlayerBattle/sPlayerBattle.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sPlayerBattle","path":"sprites/sPlayerBattle/sPlayerBattle.yy",},"resourceVersion":"1.0","name":"ea361a69-aa5f-448e-818c-7877a8e59a2d","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"56661950-199f-4a69-b0f5-9f06c7a4e6d1","path":"sprites/sPlayerBattle/sPlayerBattle.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"56661950-199f-4a69-b0f5-9f06c7a4e6d1","path":"sprites/sPlayerBattle/sPlayerBattle.yy",},"LayerId":{"name":"28940e55-c67e-444d-9b41-d22bded9a1d7","path":"sprites/sPlayerBattle/sPlayerBattle.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sPlayerBattle","path":"sprites/sPlayerBattle/sPlayerBattle.yy",},"resourceVersion":"1.0","name":"56661950-199f-4a69-b0f5-9f06c7a4e6d1","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"74654ba3-c37c-471d-b9c8-8be79a72adde","path":"sprites/sPlayerBattle/sPlayerBattle.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"74654ba3-c37c-471d-b9c8-8be79a72adde","path":"sprites/sPlayerBattle/sPlayerBattle.yy",},"LayerId":{"name":"28940e55-c67e-444d-9b41-d22bded9a1d7","path":"sprites/sPlayerBattle/sPlayerBattle.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sPlayerBattle","path":"sprites/sPlayerBattle/sPlayerBattle.yy",},"resourceVersion":"1.0","name":"74654ba3-c37c-471d-b9c8-8be79a72adde","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"9b226172-0e35-4131-ad6a-0363751f8ac8","path":"sprites/sPlayerBattle/sPlayerBattle.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"9b226172-0e35-4131-ad6a-0363751f8ac8","path":"sprites/sPlayerBattle/sPlayerBattle.yy",},"LayerId":{"name":"28940e55-c67e-444d-9b41-d22bded9a1d7","path":"sprites/sPlayerBattle/sPlayerBattle.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sPlayerBattle","path":"sprites/sPlayerBattle/sPlayerBattle.yy",},"resourceVersion":"1.0","name":"9b226172-0e35-4131-ad6a-0363751f8ac8","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"433196bf-f89a-44c8-8a0f-929825e4ae7e","path":"sprites/sPlayerBattle/sPlayerBattle.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"433196bf-f89a-44c8-8a0f-929825e4ae7e","path":"sprites/sPlayerBattle/sPlayerBattle.yy",},"LayerId":{"name":"28940e55-c67e-444d-9b41-d22bded9a1d7","path":"sprites/sPlayerBattle/sPlayerBattle.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sPlayerBattle","path":"sprites/sPlayerBattle/sPlayerBattle.yy",},"resourceVersion":"1.0","name":"433196bf-f89a-44c8-8a0f-929825e4ae7e","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"3e0dfc14-d1f1-4229-b9b7-f70582e74c92","path":"sprites/sPlayerBattle/sPlayerBattle.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"3e0dfc14-d1f1-4229-b9b7-f70582e74c92","path":"sprites/sPlayerBattle/sPlayerBattle.yy",},"LayerId":{"name":"28940e55-c67e-444d-9b41-d22bded9a1d7","path":"sprites/sPlayerBattle/sPlayerBattle.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sPlayerBattle","path":"sprites/sPlayerBattle/sPlayerBattle.yy",},"resourceVersion":"1.0","name":"3e0dfc14-d1f1-4229-b9b7-f70582e74c92","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"df5450df-1dff-4937-8413-b622c01da1e1","path":"sprites/sPlayerBattle/sPlayerBattle.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"df5450df-1dff-4937-8413-b622c01da1e1","path":"sprites/sPlayerBattle/sPlayerBattle.yy",},"LayerId":{"name":"28940e55-c67e-444d-9b41-d22bded9a1d7","path":"sprites/sPlayerBattle/sPlayerBattle.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sPlayerBattle","path":"sprites/sPlayerBattle/sPlayerBattle.yy",},"resourceVersion":"1.0","name":"df5450df-1dff-4937-8413-b622c01da1e1","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
     "spriteId": {"name":"sPlayerBattle","path":"sprites/sPlayerBattle/sPlayerBattle.yy",},
@@ -50,10 +50,10 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"b1d058f9-5db1-4b43-b4cc-545f96928392","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"5481007c-d4ad-467e-beaf-7008a33613a0","path":"sprites/sPlayerBattle/sPlayerBattle.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-            {"id":"980ab59b-1837-4414-afff-40f23fa21158","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"ea361a69-aa5f-448e-818c-7877a8e59a2d","path":"sprites/sPlayerBattle/sPlayerBattle.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-            {"id":"2a9132fb-42ba-44ae-b154-247e287b4c81","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"56661950-199f-4a69-b0f5-9f06c7a4e6d1","path":"sprites/sPlayerBattle/sPlayerBattle.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-            {"id":"cc0f55f2-1006-4f35-96af-29d99124f0b3","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"74654ba3-c37c-471d-b9c8-8be79a72adde","path":"sprites/sPlayerBattle/sPlayerBattle.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"5c9028d7-c1bc-4985-a96a-b4b3a4c79c4a","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"9b226172-0e35-4131-ad6a-0363751f8ac8","path":"sprites/sPlayerBattle/sPlayerBattle.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"6d02b066-e7ac-4bd8-a47b-219d0974f238","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"433196bf-f89a-44c8-8a0f-929825e4ae7e","path":"sprites/sPlayerBattle/sPlayerBattle.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"bfce1e19-5cdc-4a98-a220-47ae9b5b9aa1","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"3e0dfc14-d1f1-4229-b9b7-f70582e74c92","path":"sprites/sPlayerBattle/sPlayerBattle.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"35da37fb-e0a8-4e35-bea9-ec752d93dd26","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"df5450df-1dff-4937-8413-b622c01da1e1","path":"sprites/sPlayerBattle/sPlayerBattle.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"modifiers":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack",},
     ],
     "visibleRange": null,
@@ -80,8 +80,8 @@
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"28940e55-c67e-444d-9b41-d22bded9a1d7","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
-    "name": "new character",
-    "path": "folders/Sprites/player sprites/new character.yy",
+    "name": "battle players",
+    "path": "folders/Sprites/player sprites/new character/battle players.yy",
   },
   "resourceVersion": "1.0",
   "name": "sPlayerBattle",

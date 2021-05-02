@@ -87,8 +87,8 @@
     "TileSerialiseData": [],
   },
   "parent": {
-    "name": "Tile Sets",
-    "path": "folders/Tile Sets.yy",
+    "name": "old tiles",
+    "path": "folders/Tile Sets/old tiles.yy",
   },
   "resourceVersion": "1.0",
   "name": "tDirtWall",

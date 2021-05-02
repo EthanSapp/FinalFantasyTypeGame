@@ -30,9 +30,9 @@ if (room == rBattle){
 		heroPartySize = array_height_2d(gaHeroes);
 	
 		heroX = room_width - 520;
-		heroY = 50;
+		heroY = 25;
 		for (var i = 0; i < heroPartySize; i ++){
-			hero = instance_create_depth(heroX, heroY + (i * (sprite_get_height(sHero) + 20)), -100, oHero);
+			hero = instance_create_depth(heroX, heroY + (i * (sprite_get_height(sPlayerBattle) + 16)), -100, oHero);
 			hero.index = i;
 			if (gaHeroes[i, 2] <= 0){
 				hero.dead = true;
@@ -49,7 +49,7 @@ if (room == rBattle){
 	
 		for (var i = 0; i < totalMonsterGroups; i ++){
 			monsterGroup = instance_create_depth(aMonsterPos[i, 0], aMonsterPos[i, 1], -100, oEnemies);
-			monsterGroup.type =	irandom((sEnemies) - 1);
+			monsterGroup.type =	irandom(sEnemies);
 			monsterGroup.number = 1
 			monsterGroup.dead = false;
 			monsterGroup.stunned = 0;
@@ -388,7 +388,7 @@ if (room == rBattle){
 								optionTarget = dsTargetMonsters[|selectedActor];
 							}
 						} else {
-							if (optionTarget.sprite_index == sHero){
+							if (optionTarget.sprite_index == sPlayerBattle){
 								if (keyboard_check_pressed(vk_right)){
 									selectedActor = 0;
 									optionTarget = dsTargetMonsters[|0];

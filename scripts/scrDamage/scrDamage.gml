@@ -24,7 +24,7 @@ function scrDamage(){
 			}
 		}
 	} else {
-		if (target.sprite_index == sHero){
+		if (target.sprite_index == sPlayerBattle){
 			if (target.isDefending) totalDamage = ceil(totalDamage / 2);
 			
 			gaHeroes[target.index, 2] -= totalDamage;

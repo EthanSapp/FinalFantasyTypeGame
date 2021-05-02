@@ -68,8 +68,8 @@
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"1e3c0bf7-0409-4963-a12d-8d75b1fe78b2","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
-    "name": "world sprites",
-    "path": "folders/Sprites/world sprites.yy",
+    "name": "old tiles",
+    "path": "folders/Sprites/world sprites/old tiles.yy",
   },
   "resourceVersion": "1.0",
   "name": "sTree",

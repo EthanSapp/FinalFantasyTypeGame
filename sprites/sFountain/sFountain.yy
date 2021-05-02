@@ -68,8 +68,8 @@
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"a1f3244e-373d-4827-b4aa-a65b580d8879","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
-    "name": "world sprites",
-    "path": "folders/Sprites/world sprites.yy",
+    "name": "old tiles",
+    "path": "folders/Sprites/world sprites/old tiles.yy",
   },
   "resourceVersion": "1.0",
   "name": "sFountain",

@@ -68,8 +68,8 @@
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"fbaf4b59-3c12-4daa-a860-b98b569766b2","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
-    "name": "world sprites",
-    "path": "folders/Sprites/world sprites.yy",
+    "name": "old tiles",
+    "path": "folders/Sprites/world sprites/old tiles.yy",
   },
   "resourceVersion": "1.0",
   "name": "sBackground",

@@ -68,8 +68,8 @@
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"3b63174d-6ea0-4201-ba1c-00e46400f5f5","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
-    "name": "world sprites",
-    "path": "folders/Sprites/world sprites.yy",
+    "name": "old tiles",
+    "path": "folders/Sprites/world sprites/old tiles.yy",
   },
   "resourceVersion": "1.0",
   "name": "Sprite24",
