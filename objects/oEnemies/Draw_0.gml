@@ -14,13 +14,15 @@ if (state == "READY"){
 //	draw_text(numberX, y + (sprite_height / 2), string(gaMonsters[i, );
 	
 	draw_set_halign(fa_center)
-	if (stunned > 0){
-		draw_text(x + (sprite_width / 2), y, "STUNNED");
-	}
-	if (stunned > 0) && (isAsleep){
-		draw_text(x + (sprite_width / 2), y - 24, "ASLEEP");
-	}
-	if (stunned == 0) && (isAsleep){
-		draw_text(x + (sprite_width / 2), y, "ASLEEP");
+	if (dead == false){
+		if (stunned > 0){
+			draw_text(x + (sprite_width / 2), y, "duhhh...");
+		}
+		if (stunned > 0) && (isAsleep){
+			draw_text(x + (sprite_width / 2), y - 24, "zzz");
+		}
+		if (stunned == 0) && (isAsleep){
+			draw_text(x + (sprite_width / 2), y, "zzz");
+		}
 	}
 }

@@ -518,9 +518,9 @@ if (room == rBattle){
 					
 						if (activeMonster.isAsleep){
 							roll = irandom(99);
-							chanceToWake = 25;
+							chanceToWake = 10;
 						
-							if (chanceToWake < roll){
+							if (chanceToWake >= roll){
 								activeMonster.isAsleep = false;
 							}
 						}
