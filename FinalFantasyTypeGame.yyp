@@ -42,6 +42,8 @@
     {"id":{"name":"sUIBox","path":"sprites/sUIBox/sUIBox.yy",},"order":3,},
     {"id":{"name":"sLastPosition","path":"sprites/sLastPosition/sLastPosition.yy",},"order":3,},
     {"id":{"name":"sPlayerRunLeft","path":"sprites/sPlayerRunLeft/sPlayerRunLeft.yy",},"order":1,},
+    {"id":{"name":"tDirt","path":"tilesets/tDirt/tDirt.yy",},"order":1,},
+    {"id":{"name":"Sprite43","path":"sprites/Sprite43/Sprite43.yy",},"order":2,},
     {"id":{"name":"oHero","path":"objects/oHero/oHero.yy",},"order":1,},
     {"id":{"name":"rPlayerHome","path":"rooms/rPlayerHome/rPlayerHome.yy",},"order":2,},
     {"id":{"name":"oFountain","path":"objects/oFountain/oFountain.yy",},"order":4,},

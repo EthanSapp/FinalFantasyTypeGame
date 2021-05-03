@@ -29,19 +29,27 @@ if (room != rBattle){
 	if (hsp > 0){
 		sprite_index = sPlayerRunRight;
 		image_speed = 1;
-		ministeps ++;
+		if (room != rPlayerHome){
+			ministeps ++;
+		}
 	} else if (hsp < 0){
 		sprite_index = sPlayerRunLeft;
 		image_speed = 1
-		ministeps ++;
+		if (room != rPlayerHome){
+			ministeps ++;
+		}
 	} else if (vsp > 0){
 		sprite_index = sPlayerRunDown;
 		image_speed = 1;
-		ministeps ++;
+		if (room != rPlayerHome){
+			ministeps ++;
+		}
 	} else if (vsp < 0) {
 		sprite_index = sPlayerRunUp;
 		image_speed = 1;
-		ministeps ++;
+		if (room != rPlayerHome){
+			ministeps ++;
+		}
 	} else {
 		image_index = 0;
 	}
@@ -60,13 +68,10 @@ if (ministeps == 75){
 }
 
 global.chanceOfbattle = irandom_range(min_, max_);
-if (steps == global.chanceOfbattle && (room != rPlayerHome)){
+if (steps == global.chanceOfbattle){
 	instance_create_depth(0, 0, 0, oFade);
 	instance_create_layer(oPlayer.x, oPlayer.x, "Instances", oCheckPoint);
 	room_goto(rBattle);
-	steps = 0;
-	ministeps = 0;
-} else if (steps == global.chanceOfbattle && (room == rPlayerHome)){
 	steps = 0;
 	ministeps = 0;
 }
