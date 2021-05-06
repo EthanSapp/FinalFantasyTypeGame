@@ -68,8 +68,8 @@
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"f9947cb3-f050-4cce-8998-de620d40b6b3","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
-    "name": "new tiles",
-    "path": "folders/Sprites/world sprites/new tiles.yy",
+    "name": "world sprites",
+    "path": "folders/Sprites/world sprites.yy",
   },
   "resourceVersion": "1.0",
   "name": "Sprite43",

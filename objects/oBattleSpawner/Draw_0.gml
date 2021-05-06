@@ -3,11 +3,11 @@ if (room = rBattle){
 	//draw menu
 	draw_set_halign(fa_left);
 	draw_set_valign(fa_top);
-	draw_set_color(c_white);
-	draw_set_font(fMenu);
+	//draw_set_color(c_white);
+	//draw_set_font(fMenu);
 
 	fontSize = font_get_size(fMenu);
-	draw_set_color(c_black);
+	//draw_set_color(c_black);
 
 	BUFFER = 12;
 	menuX = (room_width / 2 ) + sprite_get_width(sSelector) + 120;
@@ -96,6 +96,10 @@ if (room = rBattle){
 		draw_text(room_width / 2, room_height / 2, battleOverText);
 	}
 	#endregion battle system
+	
+	if (timer >= room_speed * 3){
+		draw_text(room_width / 2, room_height / 2 - 64, "PRESS SPACE TO CONTINUE");
+	}
 }
 
 

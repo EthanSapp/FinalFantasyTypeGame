@@ -53,11 +53,6 @@ if (room != rBattle){
 	} else {
 		image_index = 0;
 	}
-
-
-	if (distance_to_object(oSwordInStone) < 10) && keyboard_check_pressed(ord("E")){
-		oSwordInStone.image_index = 0;
-	}
 }
 
 min_ = 10;
@@ -70,7 +65,7 @@ if (ministeps == 75){
 global.chanceOfbattle = irandom_range(min_, max_);
 if (steps == global.chanceOfbattle){
 	instance_create_depth(0, 0, 0, oFade);
-	instance_create_layer(oPlayer.x, oPlayer.x, "Instances", oCheckPoint);
+	instance_create_layer(oPlayer.x, oPlayer.y, "Instances", oCheckPoint);
 	room_goto(rBattle);
 	steps = 0;
 	ministeps = 0;

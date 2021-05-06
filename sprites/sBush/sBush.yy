@@ -2,15 +2,15 @@
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
-  "origin": 4,
+  "origin": 7,
   "preMultiplyAlpha": false,
   "edgeFiltering": false,
   "collisionTolerance": 0,
   "swfPrecision": 2.525,
   "bbox_left": 1,
   "bbox_right": 30,
-  "bbox_top": 1,
-  "bbox_bottom": 29,
+  "bbox_top": 2,
+  "bbox_bottom": 31,
   "HTile": false,
   "VTile": false,
   "For3D": false,
@@ -24,9 +24,9 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"528a8f05-26a0-4c19-8db2-e45f86a91325","path":"sprites/sBush/sBush.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"528a8f05-26a0-4c19-8db2-e45f86a91325","path":"sprites/sBush/sBush.yy",},"LayerId":{"name":"729348fe-6688-487d-b73f-f77dc6862d24","path":"sprites/sBush/sBush.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sBush","path":"sprites/sBush/sBush.yy",},"resourceVersion":"1.0","name":"528a8f05-26a0-4c19-8db2-e45f86a91325","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"e49c3dcd-ff4f-435e-a08b-6b02c2670fb0","path":"sprites/sBush/sBush.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"e49c3dcd-ff4f-435e-a08b-6b02c2670fb0","path":"sprites/sBush/sBush.yy",},"LayerId":{"name":"da98b0d6-6d0b-4393-824e-945279209037","path":"sprites/sBush/sBush.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sBush","path":"sprites/sBush/sBush.yy",},"resourceVersion":"1.0","name":"e49c3dcd-ff4f-435e-a08b-6b02c2670fb0","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
     "spriteId": {"name":"sBush","path":"sprites/sBush/sBush.yy",},
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"1411dcc8-b854-4bd7-8444-aa852cb6eaf0","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"528a8f05-26a0-4c19-8db2-e45f86a91325","path":"sprites/sBush/sBush.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"adf14bf7-61fb-43c0-b548-a06ccaa6ad59","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"e49c3dcd-ff4f-435e-a08b-6b02c2670fb0","path":"sprites/sBush/sBush.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"modifiers":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack",},
     ],
     "visibleRange": null,
@@ -55,7 +55,7 @@
     "backdropXOffset": 0.0,
     "backdropYOffset": 0.0,
     "xorigin": 16,
-    "yorigin": 16,
+    "yorigin": 32,
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sBush","path":"sprites/sBush/sBush.yy",},
@@ -65,11 +65,11 @@
     "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"729348fe-6688-487d-b73f-f77dc6862d24","tags":[],"resourceType":"GMImageLayer",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"da98b0d6-6d0b-4393-824e-945279209037","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
-    "name": "old tiles",
-    "path": "folders/Sprites/world sprites/old tiles.yy",
+    "name": "world sprites",
+    "path": "folders/Sprites/world sprites.yy",
   },
   "resourceVersion": "1.0",
   "name": "sBush",

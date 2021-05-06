@@ -68,8 +68,8 @@
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"9f855933-8963-4099-abfa-7586fbd16114","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
-    "name": "new tiles",
-    "path": "folders/Sprites/world sprites/new tiles.yy",
+    "name": "world sprites",
+    "path": "folders/Sprites/world sprites.yy",
   },
   "resourceVersion": "1.0",
   "name": "sOverWorldOfficial",

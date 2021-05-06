@@ -40,7 +40,7 @@ monsterCount ++;
 */
 
 
-gaHeroes[heroCount, 0] = "Titus" // name
+gaHeroes[heroCount, 0] = "TITUS" // name
 gaHeroes[heroCount, 1] = 20; // Max HP;
 gaHeroes[heroCount, 2] = 20; // Current HP;
 gaHeroes[heroCount, 3] = 10; // Max MP;
@@ -58,7 +58,7 @@ gaInv[heroCount, 2] = "";
 
 heroCount ++;
 
-gaHeroes[heroCount, 0] = "Andromeda" // name
+gaHeroes[heroCount, 0] = "ANDROMEDA" // name
 gaHeroes[heroCount, 1] = 40; // Max HP;
 gaHeroes[heroCount, 2] = 40; // Current HP;
 gaHeroes[heroCount, 3] = 0; // Max MP;
@@ -77,7 +77,7 @@ gaInv[heroCount, 2] = "";
 heroCount ++;
 
 
-gaHeroes[heroCount, 0] = "Salem" // name
+gaHeroes[heroCount, 0] = "SALEM" // name
 gaHeroes[heroCount, 1] = 15; // Max HP;
 gaHeroes[heroCount, 2] = 15; // Current HP;
 gaHeroes[heroCount, 3] = 30; // Max MP;
@@ -97,7 +97,7 @@ gaInv[heroCount, 2] = "";
 heroCount ++;
 
 
-gaHeroes[heroCount, 0] = "Straus" // name
+gaHeroes[heroCount, 0] = "STRAUS" // name
 gaHeroes[heroCount, 1] = 12; // Max HP;
 gaHeroes[heroCount, 2] = 12; // Current HP;
 gaHeroes[heroCount, 3] = 40; // Max MP;
@@ -115,7 +115,7 @@ gaInv[heroCount, 2] = "";
 
 heroCount ++;
 
-gaMonsters[monsterCount, 0] = "Porcupine"; // name
+gaMonsters[monsterCount, 0] = ""; // name
 gaMonsters[monsterCount, 1] = 12; // max HP
 gaMonsters[monsterCount, 2] = 12; // current HP
 gaMonsters[monsterCount, 3] = 10; // max MP
@@ -128,7 +128,7 @@ gaMonsters[monsterCount, 9] = false; // knows sleep
 
 monsterCount ++;
 
-gaMonsters[monsterCount, 0] = "Bat"; // name
+gaMonsters[monsterCount, 0] = ""; // name
 gaMonsters[monsterCount, 1] = 6; // max HP
 gaMonsters[monsterCount, 2] = 6; // current HP
 gaMonsters[monsterCount, 3] = 30; // max MP
@@ -141,7 +141,7 @@ gaMonsters[monsterCount, 9] = false; // knows sleep
 
 monsterCount ++;
 
-gaMonsters[monsterCount, 0] = "Hornet"; // name
+gaMonsters[monsterCount, 0] = ""; // name
 gaMonsters[monsterCount, 1] = 10; // max HP
 gaMonsters[monsterCount, 2] = 10; // current HP
 gaMonsters[monsterCount, 3] = 12; // max MP
