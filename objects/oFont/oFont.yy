@@ -1,5 +1,8 @@
 {
-  "spriteId": null,
+  "spriteId": {
+    "name": "sFont_",
+    "path": "sprites/sFont_/sFont_.yy",
+  },
   "solid": false,
   "visible": true,
   "spriteMaskId": null,

@@ -578,10 +578,3 @@ if (room == rBattle){
 	#endregion
 
 }
-
-if (room != rBattle){
-	if (keyboard_check_pressed(vk_escape)){
-		instance_create_depth(0, 0, 0, oFade);
-		room_goto(rBattle)
-	}
-}

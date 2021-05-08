@@ -74,3 +74,6 @@ if (steps == global.chanceOfbattle){
 
 
 
+
+
+
