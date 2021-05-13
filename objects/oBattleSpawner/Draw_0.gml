@@ -1,18 +1,18 @@
-if (room = rBattle){
 	
-	//draw menu
-	draw_set_halign(fa_left);
-	draw_set_valign(fa_top);
-	//draw_set_color(c_white);
-	//draw_set_font(fMenu);
+//draw menu
+draw_set_halign(fa_left);
+draw_set_valign(fa_top);
+//draw_set_color(c_white);
+//draw_set_font(fMenu);
 
-	fontSize = font_get_size(fMenu);
-	//draw_set_color(c_black);
+fontSize = font_get_size(fMenu);
+//draw_set_color(c_black);
 
-	BUFFER = 12;
-	menuX = (room_width / 2 ) + sprite_get_width(sSelector) + 120;
-	menuY = room_height - ((fontSize + BUFFER) * (array_length_1d(aMenu)));
+BUFFER = 12;
+menuX = (room_width / 2 ) + sprite_get_width(sSelector) + 120;
+menuY = room_height - ((fontSize + BUFFER) * (array_length_1d(aMenu)));
 
+if (room = rBattle){
 #region battlesystem
 	if (menuState == "MAIN"){
 		if (optionState = "MENU"){

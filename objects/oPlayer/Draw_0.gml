@@ -1,3 +1,3 @@
-if (room != rBattle){
+if (room != rBattle && room != rCultistBattle){
 	draw_self();
 }
