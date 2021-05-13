@@ -4,7 +4,7 @@ var cy = camera_get_view_y(view_camera[0]);
 
 if (place_meeting(x, y, oPlayer)){
 	if (textBoxExists == noone){
-		textBoxExists = instance_create_layer(cx, cy + (room_height / 2), "text", oTextBox);
+		textBoxExists = instance_create_layer(cx, cy + (room_height / 2), "Instances", oTextBox);
 		textBoxExists.text = instructions;
 		textBoxExists.creator = self;
 		textBoxExists.name = myName;

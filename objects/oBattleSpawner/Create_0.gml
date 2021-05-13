@@ -5,6 +5,7 @@ dsTargetMonsters = -1;
 dsTargetHeroes = -1;
 dsMagic = -1;
 
+
 maxMonsterGroups = 3;
 maxMonstersPerGroup = 5;
 

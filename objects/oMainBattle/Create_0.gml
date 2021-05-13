@@ -2,7 +2,7 @@
 
 
 
-globalvar gaHeroes, gaMonsters, currentHealth, currentMP, heroCount, monsterCount;
+globalvar gaHeroes, gaMonsters, currentHealth, currentMP, heroCount, monsterCount, cultist;
 
 
 heroCount = 0;
@@ -153,5 +153,17 @@ gaMonsters[monsterCount, 8] = false; //knows stun spell
 gaMonsters[monsterCount, 9] = false; // knows sleep
 
 monsterCount ++;
+
+cultist[0, 0] = "";
+cultist[0, 1] = 50;
+cultist[0, 2] = 50;
+cultist[0, 3] = 25;
+cultist[0, 4] = 25;
+cultist[0, 5] = 7;
+cultist[0, 6] = true;
+cultist[0, 7] = true;
+cultist[0, 8] = false;
+cultist[0, 9] = true;
+
 
 globalvar potionAmount, aetherAmount, bombAmount;

@@ -1,6 +1,6 @@
 depth = -y;
 image_speed = 0;
-if (room != rBattle){
+if (room != rBattles){
 	var moveHorizontal = (keyboard_check(ord("D")) - keyboard_check(ord("A")));
 
 	hsp = moveHorizontal * spd;
@@ -54,6 +54,8 @@ if (room != rBattle){
 		image_index = 0;
 	}
 }
+	
+
 
 min_ = 10;
 max_ = 30;
@@ -69,6 +71,13 @@ if (steps == global.chanceOfbattle){
 	room_goto(rBattle);
 	steps = 0;
 	ministeps = 0;
+}
+
+if (place_meeting(x, y, oCultist)){
+	instance_create_depth(0, 0, 0, oFade);
+	instance_create_layer(oPlayer.x, oPlayer.y, "Instances", oCheckPoint);
+	room_goto(rCultistBattle);
+	
 }
 
 

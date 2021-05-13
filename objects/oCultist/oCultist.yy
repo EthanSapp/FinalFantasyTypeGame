@@ -1,16 +1,13 @@
 {
   "spriteId": {
-    "name": "sSign",
-    "path": "sprites/sSign/sSign.yy",
+    "name": "sCultistLeaderRunDown",
+    "path": "sprites/sCultistLeaderRunDown/sCultistLeaderRunDown.yy",
   },
   "solid": false,
   "visible": true,
   "spriteMaskId": null,
   "persistent": false,
-  "parentObjectId": {
-    "name": "oWall",
-    "path": "objects/oWall/oWall.yy",
-  },
+  "parentObjectId": null,
   "physicsObject": false,
   "physicsSensor": false,
   "physicsShape": 1,
@@ -24,16 +21,16 @@
   "physicsKinematic": false,
   "physicsShapePoints": [],
   "eventList": [
-    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"parent":{"name":"oSign","path":"objects/oSign/oSign.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"parent":{"name":"oCultist","path":"objects/oCultist/oCultist.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "text",
-    "path": "folders/Objects/text.yy",
+    "name": "bosses",
+    "path": "folders/Objects/bosses.yy",
   },
   "resourceVersion": "1.0",
-  "name": "oSign",
+  "name": "oCultist",
   "tags": [],
   "resourceType": "GMObject",
 }
